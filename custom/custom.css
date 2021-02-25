@@ -76,3 +76,13 @@ figure.gallery-group {
     padding: 1rem 1rem 1.5rem;
   }
 }
+
+#artitalk_main .shuoshuo_text {
+  background-image: unset !important;
+}
+
+.cbp_tmlabel img {
+  width: 70%;
+  display: block;
+  margin: auto;
+}

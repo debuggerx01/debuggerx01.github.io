@@ -1,6 +1,12 @@
 $(document).ready(function () {
   // 设置MD编辑器在新页面打开
   $('a[href="/md_editor/"]').attr('target', '_blank');
+
+  // 设置点击头像时打开关于页面
+  $('.card-info-avatar').click(
+    function () {
+      window.open('/about/')
+    });
 });
 
 if (window.notSupportWebp) {

@@ -4,7 +4,7 @@
   
     
     <entry>
-      <title>JSONFormat4Flutter v0.9-nullsafety</title>
+      <title>JSONFormat4Flutter v0.9 更新说明</title>
       <link href="2021/04/20/jsonformat4flutter-v0-9-nullsafety/"/>
       <url>2021/04/20/jsonformat4flutter-v0-9-nullsafety/</url>
       
@@ -23,6 +23,8 @@
             <tag> 开源 </tag>
             
             <tag> flutter </tag>
+            
+            <tag> dart </tag>
             
         </tags>
       

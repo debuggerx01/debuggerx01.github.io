@@ -1,0 +1,186 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MIB275中控加焊USB接口&amp;无线carplay | DebuggerX's Blog</title><meta name="keywords" content="折腾"><meta name="author" content="DebuggerX"><meta name="copyright" content="DebuggerX"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="最终效果  无线carplay，手机和中控都不用插线了，上车自动连接，wifi互联投屏    carplay版高德地图，中控屏显示地图导航，手机显示简洁信息，可以随便放在挡风玻璃前当HUD用或者放在一边充电    手机越狱以后还可以直接在大屏上看视频啥的  动机我这辆车的中控主机型号是 MIB275，使用体验真的是一言难尽……优点是反应还算快，音质马马虎虎，但是除此之外，导航难看（刷高德定制版后是">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MIB275中控加焊USB接口&amp;无线carplay">
+<meta property="og:url" content="http://blog.debuggerx.com/2021/04/28/make-my-car-support-wireless-carplay/index.html">
+<meta property="og:site_name" content="DebuggerX&#39;s Blog">
+<meta property="og:description" content="最终效果  无线carplay，手机和中控都不用插线了，上车自动连接，wifi互联投屏    carplay版高德地图，中控屏显示地图导航，手机显示简洁信息，可以随便放在挡风玻璃前当HUD用或者放在一边充电    手机越狱以后还可以直接在大屏上看视频啥的  动机我这辆车的中控主机型号是 MIB275，使用体验真的是一言难尽……优点是反应还算快，音质马马虎虎，但是除此之外，导航难看（刷高德定制版后是">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://blog.debuggerx.com/2021/04/28/make-my-car-support-wireless-carplay/cover.webp">
+<meta property="article:published_time" content="2021-04-28T11:37:04.000Z">
+<meta property="article:modified_time" content="2021-04-28T12:28:18.327Z">
+<meta property="article:author" content="DebuggerX">
+<meta property="article:tag" content="折腾">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://blog.debuggerx.com/2021/04/28/make-my-car-support-wireless-carplay/cover.webp"><link rel="shortcut icon" href="/images/favicon.png"><link rel="canonical" href="http://blog.debuggerx.com/2021/04/28/make-my-car-support-wireless-carplay/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><script async="async" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>(adsbygoogle = window.adsbygoogle || []).push({
+  google_ad_client: 'ca-pub-2494008418102983',
+  enable_page_level_ads: 'true'
+});</script><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?45acc9824a216a8f1792b419eb91f090";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  ClickShowText: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2021-04-28 20:28:18'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+   if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }const asideStatus = saveToLocal.get('aside-status')
+if (asideStatus !== undefined) {
+   if (asideStatus === 'hide') {
+     document.documentElement.classList.add('hide-aside')
+   } else {
+     document.documentElement.classList.remove('hide-aside')
+   }
+}})()</script><meta name="referrer" content="no-referrer-when-downgrade" /><link rel="stylesheet" href="/md_editor/css/editormd.min.css"><link rel="stylesheet" href="/custom/custom.css"><script>window.notSupportWebp = !(function (){try {return document.createElement('canvas').toDataURL('image/webp',0.5).indexOf('data:image/webp')===0;}catch(err){return false;}})()</script><meta name="generator" content="Hexo 5.2.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/images/avatar.webp" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">22</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">21</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 文档</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/"><i class="fa-fw fas fa-book"></i><span> Hexo</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://butterfly.js.org/categories/Docs%E6%96%87%E6%AA%94/"><i class="fa-fw fas fa-paint-brush"></i><span> Butterfly</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-smile-o"></i><span> 娱乐</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/videos/"><i class="fa-fw fas fa-play-circle"></i><span> 视频</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-tools"></i><span> 工具</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/md_editor/"><i class="fa-fw fas fa-pen"></i><span> MDEditor</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/artitalk/"><i class="fa-fw fas fa-comments"></i><span> 说说</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div></div></div><div id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/2021/04/28/make-my-car-support-wireless-carplay/cover.webp)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">DebuggerX's Blog</a></span><span id="menus"><div id="search_button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 文档</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/"><i class="fa-fw fas fa-book"></i><span> Hexo</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://butterfly.js.org/categories/Docs%E6%96%87%E6%AA%94/"><i class="fa-fw fas fa-paint-brush"></i><span> Butterfly</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-smile-o"></i><span> 娱乐</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/videos/"><i class="fa-fw fas fa-play-circle"></i><span> 视频</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-tools"></i><span> 工具</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/md_editor/"><i class="fa-fw fas fa-pen"></i><span> MDEditor</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/artitalk/"><i class="fa-fw fas fa-comments"></i><span> 说说</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><h1 class="post-title">MIB275中控加焊USB接口&amp;无线carplay</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-04-28T11:37:04.000Z" title="发表于 2021-04-28 19:37:04">2021-04-28</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-04-28T12:28:18.327Z" title="更新于 2021-04-28 20:28:18">2021-04-28</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%8A%80%E6%9C%AF%E4%B9%8B%E5%A4%96/">技术之外</a></span></div><div class="meta-secondline"> <span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="最终效果"><a href="#最终效果" class="headerlink" title="最终效果"></a>最终效果</h1><p><img src="/2021/04/28/make-my-car-support-wireless-carplay/demo_1.webp" alt="demo_1"></p>
+<blockquote>
+<p>无线carplay，手机和中控都不用插线了，上车自动连接，wifi互联投屏</p>
+</blockquote>
+<p><img src="/2021/04/28/make-my-car-support-wireless-carplay/demo_2.webp" alt="demo_2"></p>
+<blockquote>
+<p>carplay版高德地图，中控屏显示地图导航，手机显示简洁信息，可以随便放在挡风玻璃前当HUD用或者放在一边充电</p>
+</blockquote>
+<p><img src="/2021/04/28/make-my-car-support-wireless-carplay/demo_3.webp" alt="demo_3"></p>
+<blockquote>
+<p>手机越狱以后还可以直接在大屏上看视频啥的</p>
+</blockquote>
+<h1 id="动机"><a href="#动机" class="headerlink" title="动机"></a>动机</h1><p>我这辆车的中控主机型号是 MIB275，使用体验真的是一言难尽……优点是反应还算快，音质马马虎虎，但是除此之外，导航难看（刷高德定制版后是顺眼些了但是每次启动自动进入导航界面，而且要连手机热点才能用，还是很不爽），蓝牙音乐功能简陋（无法实现音乐列表和封面图），所以很长时间我都是使用carplay来进行导航和听音乐。<br>但是这款主机只有前面板一个usb口（包括2020款的车，虽然升级的275C主机更大更漂亮，但是仍然只有前面一个usb口），使用时必须插根线，首先每次上车要先插线很麻烦，而且很容易车子震动大的时候连接断开，副驾拿东西操作空调切歌的时候也很容易碰到，一根线拖老远看着也很不爽。另外还有一个问题，carplay连接的时候蓝牙音乐就不能用了，所以我手机通过carplay导航的时候，副驾妹子想听自己手机里的歌我还得把carplay断开，手机用支架放空调口直接导航，总之就是各种不爽。<br>各种研究以后，发现解决插线问题只需要买一个无线carplay的盒子就行（注意区分，不要买成安卓车机专用的，必须买原车有线carplay升级无线的盒子，我买的是carlinkit家的）；而只有一个usb而且在主机前面使用不方便的问题，参考了这个帖子：<a href="MIB275%E6%94%B9%E8%A3%85USB%E6%8E%A5%E5%8F%A3%E4%BD%8D%E7%BD%AE">https://club.autohome.com.cn/bbs/thread/d1c6313eb1a873f1/92935542-1.html</a> ，只能拆开主机自己焊一个上去了……</p>
+<h1 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h1><p><img src="/2021/04/28/make-my-car-support-wireless-carplay/step_1.webp" alt="step_1"><br>首先是拆……就是用撬棒用大力～～<br>说的简单，实际第一次拆起来花了好久，很多地方很紧，不知道用多大力……<br>注意应该先吧空调面板那块从右边撬起来，因为空调面板的下侧正好压住主机面板，然后再用力把主机的面板完全拆掉。</p>
+<p><img src="/2021/04/28/make-my-car-support-wireless-carplay/step_2.webp" alt="step_2"><br>然后想要把主机抽出来必须用专用的拆机钥匙，就是图中插在主机上面的两个东西，淘宝搜索大众主机拆机钥匙就行，注意要买四个。有些帖子说可以自己剪银行卡做，我试过了不行，强度太低根本没法用，咱们这个主机的卡扣弹簧太硬了……</p>
+<p><img src="/2021/04/28/make-my-car-support-wireless-carplay/step_3.webp" alt="step_3"><br>经过一番折腾，终于把主机拆出来了，到这一步就已经花了我几天的摸索时间了[汗]<br>这里想把主机从下位机上拆下来还要用一种专门的六角梅花螺丝刀，我也是拆到这里才知道又去买了一套螺丝刀头，快递又是等了一天。。</p>
+<p><img src="/2021/04/28/make-my-car-support-wireless-carplay/step_4.webp" alt="step_4"><br>拆回主机带回家准备手术～[大兵]<br>左边就是买的一套螺丝刀，还挺好用的</p>
+<p><img src="/2021/04/28/make-my-car-support-wireless-carplay/step_5.webp" alt="step_5"><br>背面，还是用同一个型号的六角螺丝刀把所有螺丝拧下来，拿掉后盖</p>
+<p><img src="/2021/04/28/make-my-car-support-wireless-carplay/step_6.webp" alt="step_6"><br>上电烙铁，开始加热[闪电]<br>注意锡焊还是挺需要技巧和经验的，除非你很有自信，不然还是找修手机修电脑或者修其他电器的师傅来弄吧，不然很容易弄坏机子，或者短路啊脱焊啊什么的……这种原厂主机拿到外面很难修的，很多地方直接说修不了，弄坏了网上再买一个最少2000，还不一定好用，总之还是小心为上，三思而行吧</p>
+<p><img src="/2021/04/28/make-my-car-support-wireless-carplay/step_7.webp" alt="step_7"><br>买一根质量好点的usb2.0延长线，在差不多1米出头的位置剪断，剥好导线，等下就要按现在这个 黑-绿-白-红 的顺序焊在左下角的焊点上。这里我在塑料外壳和线的对应位置都挖了个槽，等下正好可以卡住，又能盖上后盖还把线引出来</p>
+<p><img src="/2021/04/28/make-my-car-support-wireless-carplay/step_8.webp" alt="step_8"><br>手残，锡焊水平捉急，焊了半天才弄好[糗大了]，对比下上面帖子里人家焊好的样子简直是惨不忍睹……<br>所以最好还是找师傅弄，人家专业的一分钟不要就能焊好，还要比我这半天弄的好看还结实[憨笑]</p>
+<p><img src="/2021/04/28/make-my-car-support-wireless-carplay/step_9.webp" alt="step_9"><br>焊好以后以防万一，先拿万用表把每个针脚一一测试一遍连通性，确认没有没焊上的或者短路的地方</p>
+<p><img src="/2021/04/28/make-my-car-support-wireless-carplay/step_10.webp" alt="step_10"><br>这就是焊好的成果了，后面就用拖出来的这个usb母口，面板上的usb口有空淘个防尘塞堵上就不用了，还更美观[可爱]</p>
+<p><img src="/2021/04/28/make-my-car-support-wireless-carplay/step_11.webp" alt="step_11"><br>装回车上测试，这里手机的线就是插在新焊的延长线上的了，一切正常[鼓掌]<br>把延长线通过主机后面的空间塞进去，再从变速器箱副驾侧护板那边拽出来，延长线就布置好了<br>然后就去淘宝下单无线carplay的盒子吧[憨笑]</p>
+<p><img src="/2021/04/28/make-my-car-support-wireless-carplay/step_12.webp" alt="step_12"><br>盒子到了，插上以后自动连接，再点主机界面上的carplay图标就进入了盒子的连接界面<br>上面显示的就是我的手机了，只要手机打开蓝牙和wifi，车子启动一给盒子通电就会自动连接，非常方便</p>
+<p><img src="/2021/04/28/make-my-car-support-wireless-carplay/step_13.webp" alt="step_13"><br>从副驾那边把变速器箱侧面的护板撬开，盒子和延长线母口就在这边的空隙放好，把护板装好就大功告成了～<br>可惜行车记录仪的电源线还是要从这边引到点烟器，不然就更清爽利索了</p>
+</article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%8A%98%E8%85%BE/">折腾</a></div><div class="post_share"><div class="social-share" data-image="/2021/04/28/make-my-car-support-wireless-carplay/cover.webp" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2021/04/20/jsonformat4flutter-v0-9-nullsafety/"><img class="next-cover" src="/2021/04/20/jsonformat4flutter-v0-9-nullsafety/cover.webp" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">JSONFormat4Flutter v0.9 更新说明</div></div></a></div></nav></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/images/avatar.webp" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">DebuggerX</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">22</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">21</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/debuggerx01"><i class="fab fa-github"></i><span>Follow Me</span></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="card-content"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%80%E7%BB%88%E6%95%88%E6%9E%9C"><span class="toc-number">1.</span> <span class="toc-text">最终效果</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8A%A8%E6%9C%BA"><span class="toc-number">2.</span> <span class="toc-text">动机</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A4"><span class="toc-number">3.</span> <span class="toc-text">步骤</span></a></li></ol></div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/04/28/make-my-car-support-wireless-carplay/" title="MIB275中控加焊USB接口&amp;无线carplay"><img src="/2021/04/28/make-my-car-support-wireless-carplay/cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="MIB275中控加焊USB接口&amp;无线carplay"/></a><div class="content"><a class="title" href="/2021/04/28/make-my-car-support-wireless-carplay/" title="MIB275中控加焊USB接口&amp;无线carplay">MIB275中控加焊USB接口&amp;无线carplay</a><time datetime="2021-04-28T11:37:04.000Z" title="发表于 2021-04-28 19:37:04">2021-04-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/04/20/jsonformat4flutter-v0-9-nullsafety/" title="JSONFormat4Flutter v0.9 更新说明"><img src="/2021/04/20/jsonformat4flutter-v0-9-nullsafety/cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="JSONFormat4Flutter v0.9 更新说明"/></a><div class="content"><a class="title" href="/2021/04/20/jsonformat4flutter-v0-9-nullsafety/" title="JSONFormat4Flutter v0.9 更新说明">JSONFormat4Flutter v0.9 更新说明</a><time datetime="2021-04-20T15:48:36.000Z" title="发表于 2021-04-20 23:48:36">2021-04-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/03/07/migrate-flutter-project-to-null-safety/" title="迁移Flutter项目到空安全的血泪史——有血、有泪、有💩"><img src="/2021/03/07/migrate-flutter-project-to-null-safety/cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="迁移Flutter项目到空安全的血泪史——有血、有泪、有💩"/></a><div class="content"><a class="title" href="/2021/03/07/migrate-flutter-project-to-null-safety/" title="迁移Flutter项目到空安全的血泪史——有血、有泪、有💩">迁移Flutter项目到空安全的血泪史——有血、有泪、有💩</a><time datetime="2021-03-06T16:45:18.000Z" title="发表于 2021-03-07 00:45:18">2021-03-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/02/23/a-app-bug-caused-by-hand-cream/" title="记一个由护手霜引发的BUG"><img src="/2021/02/23/a-app-bug-caused-by-hand-cream/cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="记一个由护手霜引发的BUG"/></a><div class="content"><a class="title" href="/2021/02/23/a-app-bug-caused-by-hand-cream/" title="记一个由护手霜引发的BUG">记一个由护手霜引发的BUG</a><time datetime="2021-02-23T05:19:10.000Z" title="发表于 2021-02-23 13:19:10">2021-02-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/02/18/qrs-detector-for-flutter-in-dart/" title="qrs_detector——Flutter应用中的心电心率识别"><img src="/2021/02/18/qrs-detector-for-flutter-in-dart/cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="qrs_detector——Flutter应用中的心电心率识别"/></a><div class="content"><a class="title" href="/2021/02/18/qrs-detector-for-flutter-in-dart/" title="qrs_detector——Flutter应用中的心电心率识别">qrs_detector——Flutter应用中的心电心率识别</a><time datetime="2021-02-18T10:19:39.000Z" title="发表于 2021-02-18 18:19:39">2021-02-18</time></div></div></div></div></div></div></div></main><footer id="footer" style="background: linear-gradient(20deg, #0062be, #9855e1, #6f42c1, #541bba)"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By DebuggerX</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a target="_blank" rel="noopener" href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script>window.notSupportWebp && document.querySelectorAll('img').forEach(function (e) {e.onerror=null});</script><script src="/custom/custom.js"></script></div></body></html>

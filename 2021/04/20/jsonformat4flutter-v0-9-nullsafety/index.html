@@ -1,0 +1,198 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>JSONFormat4Flutter v0.9 更新说明 | DebuggerX's Blog</title><meta name="author" content="DebuggerX"><meta name="copyright" content="DebuggerX"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta name="description" content="JSONFormat4Flutter 是一个通过输入 json 字符串，生成可以在 Flutter 项目中使用（其实不止）的 dart 语言实体类代码的 GUI 工具。初版编写于2018年1月，由于当时还没有好用的同类工具，所以按照个人的偏好和理解以相对简单粗暴的方式编写了该工具，代码质量惨不忍睹"><link rel="shortcut icon" href="/images/favicon.png"><link rel="canonical" href="http://blog.debuggerx.com/2021/04/20/jsonformat4flutter-v0-9-nullsafety/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.1.1/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?45acc9824a216a8f1792b419eb91f090";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'JSONFormat4Flutter v0.9 更新说明',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-08-28 09:08:28'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="referrer" content="no-referrer-when-downgrade" /><link rel="stylesheet" href="/md_editor/css/editormd.min.css"><link rel="stylesheet" href="/custom/custom.css"><meta name="generator" content="Hexo 6.0.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/images/avatar.webp" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">35</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">30</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 文档</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/"><i class="fa-fw fas fa-book"></i><span> Hexo</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://butterfly.js.org/categories/Docs%E6%96%87%E6%AA%94/"><i class="fa-fw fas fa-paint-brush"></i><span> Butterfly</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-smile-o"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/videos/"><i class="fa-fw fas fa-play-circle"></i><span> 视频</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-tools"></i><span> 工具</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/md_editor/"><i class="fa-fw fas fa-pen"></i><span> MDEditor</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.debuggerx.com/dgm_web"><i class="fa-fw fas fa-hand-peace"></i><span> DDE手势管理器</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/2021/04/20/jsonformat4flutter-v0-9-nullsafety/cover.webp')"><nav id="nav"><span id="blog-info"><a href="/" title="DebuggerX's Blog"><span class="site-name">DebuggerX's Blog</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 文档</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/"><i class="fa-fw fas fa-book"></i><span> Hexo</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://butterfly.js.org/categories/Docs%E6%96%87%E6%AA%94/"><i class="fa-fw fas fa-paint-brush"></i><span> Butterfly</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-smile-o"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/videos/"><i class="fa-fw fas fa-play-circle"></i><span> 视频</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-tools"></i><span> 工具</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/md_editor/"><i class="fa-fw fas fa-pen"></i><span> MDEditor</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.debuggerx.com/dgm_web"><i class="fa-fw fas fa-hand-peace"></i><span> DDE手势管理器</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">JSONFormat4Flutter v0.9 更新说明</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-04-20T15:48:36.000Z" title="发表于 2021-04-20 23:48:36">2021-04-20</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-08-28T01:08:28.948Z" title="更新于 2023-08-28 09:08:28">2023-08-28</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/">实用工具</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.4k</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="JSONFormat4Flutter v0.9 更新说明"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/debuggerx01/JSONFormat4Flutter">JSONFormat4Flutter</a> 是一个通过输入 json 字符串，生成可以在 Flutter 项目中使用（其实不止）的 dart 语言实体类代码的 GUI 工具。初版编写于2018年1月，由于当时还没有好用的同类工具，所以按照个人的偏好和理解以相对简单粗暴的方式编写了该工具，代码质量惨不忍睹，万万没想到会持续更新到今天。。。</p>
+</blockquote>
+<h1 id="迁移到空安全"><a href="#迁移到空安全" class="headerlink" title="迁移到空安全"></a>迁移到空安全</h1><p>参考 <a target="_blank" rel="noopener" href="https://github.com/debuggerx01/JSONFormat4Flutter/issues/30">dart 2.9 打开空安全后全错了，有计划兼容嘛？ #30</a>，在 Flutter 升级到2.0之后，默认开启空安全语法检查（参考：<a href="/2021/03/07/migrate-flutter-project-to-null-safety/">迁移Flutter项目到空安全的血泪史</a>），这个工具生成的 json 代码全部都报错了，主要问题如下：</p>
+<ol>
+<li>实例的变量需要在声明时初始化，或者在类的构造方法中进行初始化；</li>
+<li>类的工厂方法不允许返回 null；</li>
+<li>复杂逻辑下的可达性分析和空安全类型提升并不完美(例如对数组字段生成的赋值代码，循环中的 list 对象逻辑上不会为 null，但是语法检查器还是会将其判定为不安全的)</li>
+</ol>
+<p>例如：<br><img src="/2021/04/20/jsonformat4flutter-v0-9-nullsafety/error.webp" alt="error"></p>
+<p>针对第一个问题，修改后生成的代码所有字段的类型均设置为可空。为什么不是保持字段类型为非空呢，参考：<a target="_blank" rel="noopener" href="https://dart.cn/null-safety/understanding-null-safety#the-map-index-operator-is-nullable">Map 的索引操作符是可空的</a>，由于从 json 对象中用索引操作符方式取值时，其返回值就是可空的，而且事实上由于我们无法保证 json 字符串输入的可靠性，字段为可空是更合理的设计，在使用时总应考虑字段为空时应该如何处理，这样才能避免由于后台接口传来的数据问题导致程序出错。</p>
+<p>第二个问题让我头疼了很久。在最初的设计中，为了方便使用，我为生成的模板类添加了工厂构造函数，这样就可以直接将 json 字符串或 json 对象传递给其构造函数来快速创建实体对象，如：</p>
+<figure class="highlight dart"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> response = <span class="keyword">await</span> HTTP.<span class="keyword">get</span>(url);</span><br><span class="line"><span class="keyword">var</span> resp = BeanResp(response.body);</span><br></pre></td></tr></tbody></table></figure>
+<p>通过在构造函数中对输入值的判断，如果输入为空（如null、’’、’null’）时，返回的 response 即为 null。但是新的空安全语法中，构造函数不允许返回 null，这就使得设计变得不可行（参考：<a target="_blank" rel="noopener" href="https://dart.cn/null-safety/faq#how-should-i-migrate-a-factory-that-can-return-null">我应该如何迁移可能返回 null 的工厂方法？</a>）。最终我是新增了 parse(jsonStr) 静态方法，用于替代之前的工厂构造函数，推荐在项目中优先使用该方法进行解析，也就是说上面的代码可以写成：</p>
+<figure class="highlight dart"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> response = <span class="keyword">await</span> HTTP.<span class="keyword">get</span>(url);</span><br><span class="line"><span class="keyword">var</span> resp = BeanResp.parse(response.body);</span><br></pre></td></tr></tbody></table></figure>
+<p>而且这样以来也有一个好处，就是在对网络请求框架进行封装的时候，参考我在<a target="_blank" rel="noopener" href="https://juejin.cn/post/6844903639832608775">在Flutter开发过程中快速生成json解析模板类的工具 | 掘金技术征文</a>中给出的示例，解析处的代码需要写成：</p>
+<figure class="highlight dart"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> response = <span class="keyword">await</span> HTTP.<span class="keyword">get</span>(url);</span><br><span class="line">Person data = BaseResp&lt;Person&gt;(response.body, (res) =&gt; Person.fromJson(res)).data;</span><br><span class="line"><span class="comment">///<span class="language-markdown">或者</span></span></span><br><span class="line">Phone data = BaseResp&lt;Phone&gt;(response.body, (res) =&gt; Phone.fromJson(res)).data;</span><br></pre></td></tr></tbody></table></figure>
+<p>现在在基类代码基本不变的情况下，代码可以写成：</p>
+<figure class="highlight dart"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">'dart:convert'</span> <span class="keyword">show</span> json;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">BaseResp</span>&lt;<span class="title">T</span>&gt; </span>{</span><br><span class="line">  <span class="built_in">int?</span> code;</span><br><span class="line">  <span class="built_in">String?</span> msg;</span><br><span class="line">  T? data;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">factory</span> BaseResp(jsonStr, <span class="built_in">Function</span> buildFun) =&gt;</span><br><span class="line">      jsonStr <span class="keyword">is</span> <span class="built_in">String</span> ? BaseResp.fromJson(json.decode(jsonStr), buildFun) : BaseResp.fromJson(jsonStr, buildFun);</span><br><span class="line"></span><br><span class="line">  BaseResp.fromJson(jsonRes, <span class="built_in">Function</span> buildFun) {</span><br><span class="line">    code = jsonRes[<span class="string">'code'</span>];</span><br><span class="line">    msg = jsonRes[<span class="string">'msg'</span>];</span><br><span class="line">    <span class="comment">/// <span class="language-markdown">这里可以做code和msg的处理逻辑</span></span></span><br><span class="line">    data = buildFun(jsonRes[<span class="string">'data'</span>]);</span><br><span class="line">  }</span><br><span class="line">}</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+
+<p>解析处的代码可以写成：</p>
+<figure class="highlight dart"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> response = <span class="keyword">await</span> HTTP.<span class="keyword">get</span>(url);</span><br><span class="line">Person data = BaseResp&lt;Person&gt;(response.body, Person.parse).data;</span><br><span class="line"><span class="comment">///<span class="language-markdown">或者</span></span></span><br><span class="line">Phone data = BaseResp&lt;Phone&gt;(response.body, Phone.parse).data;</span><br></pre></td></tr></tbody></table></figure>
+<p>代码相对精简了一点</p>
+<p>使用新版本生成的上面报错类的代码如下：<br><img src="/2021/04/20/jsonformat4flutter-v0-9-nullsafety/ok.webp" alt="ok"></p>
+<h1 id="使用-nuitka3-打包-Linux-下的二进制程序为-AppImage"><a href="#使用-nuitka3-打包-Linux-下的二进制程序为-AppImage" class="headerlink" title="使用 nuitka3 打包 Linux 下的二进制程序为 AppImage"></a>使用 nuitka3 打包 Linux 下的二进制程序为 AppImage</h1><blockquote>
+<p>参看：<a target="_blank" rel="noopener" href="https://github.com/debuggerx01/JSONFormat4Flutter/issues/29">0.8无linux版本下载 #29</a>，一开始选择使用 PyQt 写这个工具，就是看中它的跨平台能力，可以方便地使用 Pyinstaller 进行三个桌面平台打包发布（当然如果是现在，可能 Electron 或者 Flutter for Desktop 会是更好的选择）。但是后面发现，使用 Pyinstaller 打包的方案在 Windows 和 MacOS 上表现还算良好，而在 Linux 平台下，不光打出的包要大很多，而且兼容性很有问题，在比较新的系统上进行打包，放到相对老一点的系统大概率打不开。</p>
+</blockquote>
+<p>于是现在在 Linux 平台下改用 nuitka3 打包为 AppImage 格式。在我的 Deepin Linux 下安装配置和打包的操作如下：</p>
+<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">安装 nuitka3</span></span><br><span class="line">pip3 install nuitka3</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">安装编译所需的依赖</span></span><br><span class="line">sudo apt install clang python3-dev chrpath</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">打包为 AppImage</span></span><br><span class="line">nuitka3 --clang --standalone --windows-disable-console --linux-onefile-icon=logo.png --output-dir=output --show-progress --plugin-enable=qt-plugins --onefile formatter.py</span><br></pre></td></tr></tbody></table></figure>
+<p>参考：<a target="_blank" rel="noopener" href="https://www.nuitka.net/posts/nuitka-release-0610.html">Nuitka Release 0.6.10</a></p>
+<blockquote>
+<p>Added experimental support for Onefile mode with –onefile that uses AppImage on Linux and our own bootstrap binary on Windows. Other platforms are not supported at this time. With this, the standalone folder is packed into a single binary. The Windows variant currently doesn’t yet do any compression yet, but the Linux one does.</p>
+</blockquote>
+<p>这个版本开始可以通过加入 <code>--onefile</code> 参数，在 Linux 平台下使用 AppImage 打包～</p>
+<h1 id="全平台都可以直接双击运行工具了-clap"><a href="#全平台都可以直接双击运行工具了-clap" class="headerlink" title="全平台都可以直接双击运行工具了:clap:"></a>全平台都可以直接双击运行工具了<span class="github-emoji"><span>👏</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f44f.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></h1><p>得益于多数 Linux 桌面对 AppImage 的支持，再来本人前段时间不得已订阅了 Apple 开发者账号，现在三个桌面平台运行程序都不用再输入命令了：<br>linux:<br>直接双击运行 formatter_linux.AppImage</p>
+<p>mac：<br>双击解压 formatter_mac.zip 后即可双击 formatter.app</p>
+<p>windows：<br>直接双击运行 formatter_win.exe</p>
+</article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%BC%80%E6%BA%90/">开源</a><a class="post-meta__tags" href="/tags/flutter/">flutter</a><a class="post-meta__tags" href="/tags/dart/">dart</a></div><div class="post_share"><div class="social-share" data-image="/2021/04/20/jsonformat4flutter-v0-9-nullsafety/cover.webp" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021/04/28/make-my-car-support-wireless-carplay/" title="MIB275中控加焊USB接口&amp;无线carplay"><img class="cover" src="/2021/04/28/make-my-car-support-wireless-carplay/cover.webp" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">MIB275中控加焊USB接口&amp;无线carplay</div></div></a></div><div class="next-post pull-right"><a href="/2021/03/07/migrate-flutter-project-to-null-safety/" title="迁移Flutter项目到空安全的血泪史——有血、有泪、有💩"><img class="cover" src="/2021/03/07/migrate-flutter-project-to-null-safety/cover.webp" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">迁移Flutter项目到空安全的血泪史——有血、有泪、有💩</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2022/04/17/conditional-compilation-using-source-gen-in-flutter-1/" title="在 flutter 中利用 source_gen 实现条件编译（上）"><img class="cover" src="/2022/04/17/conditional-compilation-using-source-gen-in-flutter-1/cover.webp" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-04-17</div><div class="title">在 flutter 中利用 source_gen 实现条件编译（上）</div></div></a></div><div><a href="/2022/06/19/conditional-compilation-using-source-gen-in-flutter-2/" title="在 flutter 中利用 source_gen 实现条件编译（中）"><img class="cover" src="/2022/04/17/conditional-compilation-using-source-gen-in-flutter-1/cover.webp" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-06-19</div><div class="title">在 flutter 中利用 source_gen 实现条件编译（中）</div></div></a></div><div><a href="/2023/06/20/conditional-compilation-using-source-gen-in-flutter-3/" title="在 flutter 中利用 source_gen 实现条件编译（下）"><img class="cover" src="/2022/04/17/conditional-compilation-using-source-gen-in-flutter-1/cover.webp" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-06-20</div><div class="title">在 flutter 中利用 source_gen 实现条件编译（下）</div></div></a></div><div><a href="/2020/12/31/manage-i18n-resources-gracefully/" title="优雅地管理国际化资源——i18n-manager"><img class="cover" src="/2020/12/31/manage-i18n-resources-gracefully/cover.webp" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-12-31</div><div class="title">优雅地管理国际化资源——i18n-manager</div></div></a></div><div><a href="/2021/02/18/qrs-detector-for-flutter-in-dart/" title="qrs_detector——Flutter应用中的心电心率识别"><img class="cover" src="/2021/02/18/qrs-detector-for-flutter-in-dart/cover.webp" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-02-18</div><div class="title">qrs_detector——Flutter应用中的心电心率识别</div></div></a></div><div><a href="/2022/01/21/dgm-changelog/" title="DDE手势管理器-更新日志"><img class="cover" src="/2022/01/21/dgm-changelog/cover.webp" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-01-21</div><div class="title">DDE手势管理器-更新日志</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/images/avatar.webp" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">DebuggerX</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">35</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">30</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/debuggerx01"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BF%81%E7%A7%BB%E5%88%B0%E7%A9%BA%E5%AE%89%E5%85%A8"><span class="toc-number">1.</span> <span class="toc-text">迁移到空安全</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-nuitka3-%E6%89%93%E5%8C%85-Linux-%E4%B8%8B%E7%9A%84%E4%BA%8C%E8%BF%9B%E5%88%B6%E7%A8%8B%E5%BA%8F%E4%B8%BA-AppImage"><span class="toc-number">2.</span> <span class="toc-text">使用 nuitka3 打包 Linux 下的二进制程序为 AppImage</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%A8%E5%B9%B3%E5%8F%B0%E9%83%BD%E5%8F%AF%E4%BB%A5%E7%9B%B4%E6%8E%A5%E5%8F%8C%E5%87%BB%E8%BF%90%E8%A1%8C%E5%B7%A5%E5%85%B7%E4%BA%86-clap"><span class="toc-number">3.</span> <span class="toc-text">全平台都可以直接双击运行工具了👏</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/07/18/remote-system-monitor/" title="远程监视器——使用Flutter/Dart开发的Linux系统状态监视APP"><img src="/2023/07/18/remote-system-monitor/cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="远程监视器——使用Flutter/Dart开发的Linux系统状态监视APP"/></a><div class="content"><a class="title" href="/2023/07/18/remote-system-monitor/" title="远程监视器——使用Flutter/Dart开发的Linux系统状态监视APP">远程监视器——使用Flutter/Dart开发的Linux系统状态监视APP</a><time datetime="2023-07-18T01:36:03.000Z" title="发表于 2023-07-18 09:36:03">2023-07-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/06/20/conditional-compilation-using-source-gen-in-flutter-3/" title="在 flutter 中利用 source_gen 实现条件编译（下）"><img src="/2022/04/17/conditional-compilation-using-source-gen-in-flutter-1/cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="在 flutter 中利用 source_gen 实现条件编译（下）"/></a><div class="content"><a class="title" href="/2023/06/20/conditional-compilation-using-source-gen-in-flutter-3/" title="在 flutter 中利用 source_gen 实现条件编译（下）">在 flutter 中利用 source_gen 实现条件编译（下）</a><time datetime="2023-06-20T14:36:52.000Z" title="发表于 2023-06-20 22:36:52">2023-06-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/06/19/conditional-compilation-using-source-gen-in-flutter-2/" title="在 flutter 中利用 source_gen 实现条件编译（中）"><img src="/2022/04/17/conditional-compilation-using-source-gen-in-flutter-1/cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="在 flutter 中利用 source_gen 实现条件编译（中）"/></a><div class="content"><a class="title" href="/2022/06/19/conditional-compilation-using-source-gen-in-flutter-2/" title="在 flutter 中利用 source_gen 实现条件编译（中）">在 flutter 中利用 source_gen 实现条件编译（中）</a><time datetime="2022-06-18T20:08:28.000Z" title="发表于 2022-06-19 04:08:28">2022-06-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/05/03/make-a-ci-workflow-with-gitea-and-drone/" title="基于Gitea+Drone的CI系统"><img src="/2022/05/03/make-a-ci-workflow-with-gitea-and-drone/cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="基于Gitea+Drone的CI系统"/></a><div class="content"><a class="title" href="/2022/05/03/make-a-ci-workflow-with-gitea-and-drone/" title="基于Gitea+Drone的CI系统">基于Gitea+Drone的CI系统</a><time datetime="2022-05-03T14:28:52.000Z" title="发表于 2022-05-03 22:28:52">2022-05-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/04/17/conditional-compilation-using-source-gen-in-flutter-1/" title="在 flutter 中利用 source_gen 实现条件编译（上）"><img src="/2022/04/17/conditional-compilation-using-source-gen-in-flutter-1/cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="在 flutter 中利用 source_gen 实现条件编译（上）"/></a><div class="content"><a class="title" href="/2022/04/17/conditional-compilation-using-source-gen-in-flutter-1/" title="在 flutter 中利用 source_gen 实现条件编译（上）">在 flutter 中利用 source_gen 实现条件编译（上）</a><time datetime="2022-04-16T19:35:20.000Z" title="发表于 2022-04-17 03:35:20">2022-04-17</time></div></div></div></div></div></div></main><footer id="footer" style="background: linear-gradient(20deg, #0062be, #9855e1, #6f42c1, #541bba)"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By DebuggerX</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text"><a href="https://beian.miit.gov.cn/" target="_blank"><span>备案号：沪ICP备2022004013号-1</span></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script src="/custom/custom.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div class="no-result" id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>

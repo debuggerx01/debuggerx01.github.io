@@ -50,7 +50,7 @@ figure.gallery-group {
 }
 
 #recent-posts > .recent-post-item > .recent-post-info {
-  padding: 0 10px;
+  padding: 0 20px;
 }
 
 @media screen and (max-width: 600px) {

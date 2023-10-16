@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Linux通用键位修改</title>
+      <link href="/2023/10/07/map-scancodes-to-keycodes/"/>
+      <url>/2023/10/07/map-scancodes-to-keycodes/</url>
+      
+        <content type="html"><![CDATA[<ul><li><a href="https://www.bilibili.com/read/cv5156572/">Linux通用键位修改（中）-实际操作</a></li><li><a href="https://harttle.land/2019/08/08/linux-keymap-on-macbook.html#header-2">ArchLinux 键盘映射：交换 CapsLock 和 Ctrl</a></li></ul><figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">将PrtSc键映射为Insert</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">将右Alt键映射为F16(XF86Launch7)</span></span><br><span class="line">sudo tee /etc/udev/hwdb.d/90-custom-keyboard.hwdb &amp;&gt;/dev/null &lt;&lt;EOF</span><br><span class="line">evdev:input:b0003*</span><br><span class="line">  KEYBOARD_KEY_70046=insert</span><br><span class="line">  KEYBOARD_KEY_700e6=f16</span><br><span class="line">EOF</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">更新hwdb并触发生效</span></span><br><span class="line">sudo systemd-hwdb update &amp;&amp; sudo udevadm trigger</span><br></pre></td></tr></tbody></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 奇技淫巧 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>fcitx5_customizer —— 一个让 Fcitx5 更符合简中用户使用习惯的优化脚本</title>
       <link href="/2023/09/20/fcitx5-customizer/"/>
       <url>/2023/09/20/fcitx5-customizer/</url>
@@ -51,9 +76,9 @@
       
         <tags>
             
-            <tag> flutter </tag>
-            
             <tag> linux </tag>
+            
+            <tag> flutter </tag>
             
             <tag> dart </tag>
             
@@ -82,11 +107,11 @@
             
             <tag> 开源 </tag>
             
+            <tag> 编程 </tag>
+            
             <tag> flutter </tag>
             
             <tag> dart </tag>
-            
-            <tag> 编程 </tag>
             
         </tags>
       
@@ -113,11 +138,11 @@
             
             <tag> 开源 </tag>
             
+            <tag> 编程 </tag>
+            
             <tag> flutter </tag>
             
             <tag> dart </tag>
-            
-            <tag> 编程 </tag>
             
         </tags>
       
@@ -171,11 +196,11 @@
             
             <tag> 开源 </tag>
             
+            <tag> 编程 </tag>
+            
             <tag> flutter </tag>
             
             <tag> dart </tag>
-            
-            <tag> 编程 </tag>
             
         </tags>
       
@@ -202,11 +227,11 @@
             
             <tag> linux </tag>
             
+            <tag> Chrome </tag>
+            
             <tag> vim </tag>
             
             <tag> shell </tag>
-            
-            <tag> Chrome </tag>
             
             <tag> Easystroke </tag>
             
@@ -260,9 +285,9 @@
       
         <tags>
             
-            <tag> docker </tag>
-            
             <tag> 运维 </tag>
+            
+            <tag> docker </tag>
             
         </tags>
       
@@ -409,11 +434,11 @@
             
             <tag> 开源 </tag>
             
-            <tag> Chrome </tag>
+            <tag> web </tag>
             
             <tag> 编程 </tag>
             
-            <tag> web </tag>
+            <tag> Chrome </tag>
             
             <tag> 插件 </tag>
             
@@ -494,11 +519,11 @@
       
         <tags>
             
+            <tag> 前端 </tag>
+            
             <tag> flutter </tag>
             
             <tag> dart </tag>
-            
-            <tag> 前端 </tag>
             
         </tags>
       
@@ -523,13 +548,13 @@
       
         <tags>
             
-            <tag> flutter </tag>
-            
-            <tag> 自动化 </tag>
-            
             <tag> 前端 </tag>
             
             <tag> bug </tag>
+            
+            <tag> flutter </tag>
+            
+            <tag> 自动化 </tag>
             
         </tags>
       
@@ -664,11 +689,11 @@
             
             <tag> 开源 </tag>
             
+            <tag> 前端 </tag>
+            
             <tag> flutter </tag>
             
             <tag> 自动化 </tag>
-            
-            <tag> 前端 </tag>
             
         </tags>
       
@@ -693,9 +718,9 @@
       
         <tags>
             
-            <tag> flutter </tag>
-            
             <tag> 前端 </tag>
+            
+            <tag> flutter </tag>
             
         </tags>
       
@@ -851,9 +876,9 @@
       
         <tags>
             
-            <tag> linux </tag>
-            
             <tag> kvm </tag>
+            
+            <tag> linux </tag>
             
         </tags>
       
@@ -988,13 +1013,13 @@
       
         <tags>
             
-            <tag> 开源 </tag>
-            
-            <tag> 前端 </tag>
-            
             <tag> markdown </tag>
             
             <tag> hexo </tag>
+            
+            <tag> 开源 </tag>
+            
+            <tag> 前端 </tag>
             
         </tags>
       
@@ -1019,9 +1044,9 @@
       
         <tags>
             
-            <tag> 运维 </tag>
-            
             <tag> nginx </tag>
+            
+            <tag> 运维 </tag>
             
             <tag> 全栈 </tag>
             

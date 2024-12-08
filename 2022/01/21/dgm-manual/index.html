@@ -1,0 +1,281 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>DDE手势管理器-说明手册 | DebuggerX's Blog</title><meta name="author" content="DebuggerX"><meta name="copyright" content="DebuggerX"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta name="description" content="概述DDE手势管理器是专为 DDE 桌面环境打造的触摸板手势管理工具（缩写：dgm），客户端使用 Flutter 构建，支持如下功能：  创建、编辑、删除本地手势配置方案 将选定手势方案应用到系统中 注册登陆后可以上传、分享自己创建的配置方案 可以下载、点赞他人分享的配置方案 贴合 DDE 的 UI"><link rel="shortcut icon" href="/images/favicon.png"><link rel="canonical" href="http://blog.debuggerx.com/2022/01/21/dgm-manual/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.1.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?45acc9824a216a8f1792b419eb91f090";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'DDE手势管理器-说明手册',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-11-20 16:57:49'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="referrer" content="no-referrer-when-downgrade" /><link rel="stylesheet" href="/md_editor/css/editormd.min.css"><link rel="stylesheet" href="/custom/custom.css"><meta name="generator" content="Hexo 6.0.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/images/avatar.webp" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">38</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">31</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 文档</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/"><i class="fa-fw fas fa-book"></i><span> Hexo</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://butterfly.js.org/categories/Docs%E6%96%87%E6%AA%94/"><i class="fa-fw fas fa-paint-brush"></i><span> Butterfly</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-smile-o"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/videos/"><i class="fa-fw fas fa-play-circle"></i><span> 视频</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="//debuggerx.com/emulator_js"><i class="fa-fw fas fa-gamepad"></i><span> 游戏</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-tools"></i><span> 工具</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/md_editor/"><i class="fa-fw fas fa-pen"></i><span> MDEditor</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.debuggerx.com/dgm_web"><i class="fa-fw fas fa-hand-peace"></i><span> DDE手势管理器</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/2022/01/21/dgm-manual/cover.webp')"><nav id="nav"><span id="blog-info"><a href="/" title="DebuggerX's Blog"><span class="site-name">DebuggerX's Blog</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 文档</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/"><i class="fa-fw fas fa-book"></i><span> Hexo</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://butterfly.js.org/categories/Docs%E6%96%87%E6%AA%94/"><i class="fa-fw fas fa-paint-brush"></i><span> Butterfly</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-smile-o"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/videos/"><i class="fa-fw fas fa-play-circle"></i><span> 视频</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="//debuggerx.com/emulator_js"><i class="fa-fw fas fa-gamepad"></i><span> 游戏</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-tools"></i><span> 工具</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/md_editor/"><i class="fa-fw fas fa-pen"></i><span> MDEditor</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.debuggerx.com/dgm_web"><i class="fa-fw fas fa-hand-peace"></i><span> DDE手势管理器</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">DDE手势管理器-说明手册</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-01-21T08:40:03.000Z" title="发表于 2022-01-21 16:40:03">2022-01-21</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-11-20T08:57:49.108Z" title="更新于 2024-11-20 16:57:49">2024-11-20</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/">实用工具</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">2.5k</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="DDE手势管理器-说明手册"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>DDE手势管理器是专为 <a target="_blank" rel="noopener" href="https://www.deepin.org/zh/dde/">DDE</a> 桌面环境打造的触摸板手势管理工具（缩写：dgm），客户端使用 <a target="_blank" rel="noopener" href="https://flutter.dev/">Flutter</a> 构建，支持如下功能：</p>
+<ul>
+<li>创建、编辑、删除本地手势配置方案</li>
+<li>将选定手势方案应用到系统中</li>
+<li>注册登陆后可以上传、分享自己创建的配置方案</li>
+<li>可以下载、点赞他人分享的配置方案</li>
+<li>贴合 DDE 的 UI 设计风格，支持系统主题切换和活动色</li>
+<li>支持多语言</li>
+</ul>
+<h1 id="使用入门"><a href="#使用入门" class="headerlink" title="使用入门"></a>使用入门</h1><p>您可以通过以下方式运行或关闭手势管理器，或者创建快捷方式。</p>
+<style>
+    img[alt=logo] {
+        display: inline !important;
+        margin: -0.2em 0.5em !important;
+        width: 1.5em;
+    }
+</style>
+
+<h3 id="运行手势管理器"><a href="#运行手势管理器" class="headerlink" title="运行手势管理器"></a>运行手势管理器</h3><ol>
+<li>单击任务栏上的手势管理器图标<img src="/2022/01/21/dgm-manual/logo.webp" alt="logo">，进入手势管理器界面。</li>
+<li>上下滚动鼠标滚轮浏览或通过搜索，找到手势管理器图标<img src="/2022/01/21/dgm-manual/logo.webp" alt="logo">，单击运行 。</li>
+<li>右键单击<img src="/2022/01/21/dgm-manual/logo.webp" alt="logo"> ，您可以：<ul>
+<li>单击 发送到桌面，在桌面创建快捷方式。</li>
+<li>单击 发送到任务栏，将应用程序固定到任务栏。</li>
+</ul>
+</li>
+</ol>
+<h3 id="关闭手势管理器"><a href="#关闭手势管理器" class="headerlink" title="关闭手势管理器"></a>关闭手势管理器</h3><ul>
+<li>在手势管理器界面，单击 <img src="http://twemoji.maxcdn.com/36x36/2716.png" title="twemoji-2716" alt="twemoji-2716" class="emoji twemoji" />，退出手势管理器。</li>
+<li>右键单击任务栏上的 <img src="/2022/01/21/dgm-manual/logo.webp" alt="logo"> 图标，选择 关闭所有 来退出手势管理器。</li>
+</ul>
+<h3 id="通过浏览器使用在线版手势管理器"><a href="#通过浏览器使用在线版手势管理器" class="headerlink" title="通过浏览器使用在线版手势管理器"></a>通过浏览器使用在线版手势管理器</h3><p>如果由于各种原因不方便在电脑上安装本工具，也可以通过浏览器访问 <a target="_blank" rel="noopener" href="http://www.debuggerx.com/dgm_web">DDE手势管理器Web版</a> 的方式使用本工具的所有功能～</p>
+<h1 id="操作介绍"><a href="#操作介绍" class="headerlink" title="操作介绍"></a>操作介绍</h1><p>初次打开 DDE 手势管理器，您将看到如下界面：<br><img src="/2022/01/21/dgm-manual/welcome.webp" alt="welcome"><br>界面可分为：</p>
+<ul>
+<li>左侧的【本地方案管理】面板</li>
+<li>中部的【手势方案编辑】面板</li>
+<li>右侧的【方案市场/我的】面板</li>
+<li>底部的【功能设置】工具条<br>管理器的所有功能都将通过本界面完成。</li>
+</ul>
+<h2 id="本地方案管理"><a href="#本地方案管理" class="headerlink" title="本地方案管理"></a>本地方案管理</h2><p>该面板将显示所有本地存在的配置方案，可以通过面板右上角的按钮切换隐藏状态。面板列表除去第一条固定为【系统默认方案 <i class="fa fa-history fa-emoji" title="history"></i>】，还将列出如下类型的方案：</p>
+<ul>
+<li>【<i class="fa fa-user fa-emoji" title="user"></i>】表示用户本地创建的方案，还未上传，可以随意编辑；</li>
+<li>【<i class="fa fa-cloud-upload fa-emoji" title="cloud-upload"></i>】表示用户创建的方案，且已经上传成功，可以在【我的】面板查看下载；</li>
+<li>【<i class="fa fa-shopping-cart fa-emoji" title="shopping-cart"></i>】表示该方案来自【方案市场】，不可直接编辑其内容，但可以复制其中的手势命令来配置出自己想要的方案。</li>
+</ul>
+<blockquote>
+<p>当点击方案条目时，【手势方案编辑】面板自动更新为对应内容。</p>
+</blockquote>
+<p>面板下侧为工具条，分别为：</p>
+<ul>
+<li>【<i class="fa fa-plus fa-emoji" title="plus"></i>】创建空白的手势方案</li>
+<li>【<i class="fa fa-minus fa-emoji" title="minus"></i>】删除当前选中的手势方案</li>
+<li>【<i class="fa fa-copy fa-emoji" title="copy"></i>】为当前选中的手势方案创建副本，这在想要简单修改某个来自市场的配置方案时较为有用</li>
+<li>【<i class="fa fa-check fa-emoji" title="check"></i>】应用当前选中的手势方案</li>
+</ul>
+<h3 id="应用手势方案时"><a href="#应用手势方案时" class="headerlink" title="应用手势方案时"></a>应用手势方案时</h3><h4 id="APP"><a href="#APP" class="headerlink" title="APP"></a>APP</h4><p>如果使用的是本工具的 app 版本，点击应用后将出现如下对话框：<br><img src="/2022/01/21/dgm-manual/apply_app.webp" alt="apply_app"></p>
+<h4 id="Web"><a href="#Web" class="headerlink" title="Web"></a>Web</h4><p>如果使用的是本工具的 app 版本，点击应用后将出现如下提示：<br><img src="/2022/01/21/dgm-manual/apply_web.webp" alt="apply_web"><br>此时请按提示，打开系统的终端模拟器，粘贴剪切板中的内容后回车，然后将出现如下对话框：<br><img src="/2022/01/21/dgm-manual/apply_web_dialog.webp" alt="apply_web_dialog"></p>
+<blockquote>
+<p>出现对话框后，请务必确保已经保存好了所有的工作进度，当点击【立即注销】后，系统将自动注销，所有未保存的文件内容都有可能丢失！</p>
+</blockquote>
+<h2 id="手势方案编辑"><a href="#手势方案编辑" class="headerlink" title="手势方案编辑"></a>手势方案编辑</h2><p>该面板用于修改编辑选定方案的具体内容，该面板从上到下可分为【手势编辑器】、【手势编辑工具条】、【方案名称编辑及方案上传按钮】、【方案描述编辑器】</p>
+<h3 id="手势编辑器"><a href="#手势编辑器" class="headerlink" title="手势编辑器"></a>手势编辑器</h3><h4 id="工具条操作"><a href="#工具条操作" class="headerlink" title="工具条操作"></a>工具条操作</h4><ul>
+<li>新增一个手势：点击工具条的【<i class="fa fa-plus fa-emoji" title="plus"></i>】按钮，此时会自动添加一条尚未占用的手势配置</li>
+<li>移除一个手势：点击工具条的【<i class="fa fa-minus fa-emoji" title="minus"></i>】按钮，将删除当前选中的手势</li>
+<li>复制一个手势：点击工具条的【<i class="fa fa-copy fa-emoji" title="copy"></i>】按钮，将当前选中的手势复制到应用内的剪切板中</li>
+<li>粘贴一个手势：点击工具条的【<i class="fa fa-calendar-o fa-emoji" title="calendar-o"></i>】按钮，将当前应用内剪切板中的手势粘贴到本方案中（如果手势已经被占用，则会自动修改为一条尚未占用的手势）</li>
+</ul>
+<h4 id="单个手势编辑"><a href="#单个手势编辑" class="headerlink" title="单个手势编辑"></a>单个手势编辑</h4><ol>
+<li>点击【手势编辑器】中的单个手势将其高亮选中，再次点击进入编辑状态</li>
+<li>在编辑模式下，可以通过下拉框选择该手势的【手指数】、【手势类型】、【手势方向】和【命令类型】</li>
+<li>根据【命令类型】的不同，以不同的方式设置【命令】：<ol>
+<li>【内置操作】通过下拉框选择手势触发时想要执行的内置命令</li>
+<li>【命令行】直接输入手势触发时想要执行的shell命令语句</li>
+<li>【快捷键】通过监听键盘输入（可以不必同时按下），设置手势触发时向系统发送的组合快捷键</li>
+</ol>
+</li>
+<li>如有必要，可以对该条手势添加备注说明</li>
+<li>编辑完成后，点击编辑器内的其他任意位置退出编辑模式</li>
+</ol>
+<h3 id="修改方案名称"><a href="#修改方案名称" class="headerlink" title="修改方案名称"></a>修改方案名称</h3><p>通过输入框修改当前方案的名称，修改完成后点击输入框以外的任意位置或者输入回车以应用名称更改，新的方案名称将自动同步到【本地方案管理】面板中</p>
+<blockquote>
+<p><em>注意</em>：不允许使用本地已经存在的方案名称，若出现冲突时将给出相应提示</p>
+</blockquote>
+<h3 id="方案上传"><a href="#方案上传" class="headerlink" title="方案上传"></a>方案上传</h3><p>点击方案名称输入框右侧的上传按钮，可以将当前方案上传到云端，此时可能出现如下提示：</p>
+<ol>
+<li>【请填写方案描述】<br> 如果只是本地使用的方案，可以不用填写方案描述，但是上传时则强制要求填写，这样可以确保您自己或其他用户快速了解方案的一些细节。具体操作可以参考下一小节；</li>
+<li>【请登录：您需要先登录才能进行上传操作】<br> 如果处于未登录状态则会弹出本提示，登录/注册操作请参考【<a href="/2022/01/21/dgm-manual/#%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C">我的-登录/注册</a>】小节</li>
+<li>【是否同时分享到方案市场？】<br> 如果选择【分享】，那么其他用户可以通过【方案市场】面板看到您上传的这个手势方案</li>
+</ol>
+<h3 id="编写方案描述"><a href="#编写方案描述" class="headerlink" title="编写方案描述"></a>编写方案描述</h3><p>方案描述编辑器支持 <a target="_blank" rel="noopener" href="https://baike.baidu.com/item/markdown/3245829">Markdown</a> 语法，可以方便地编写出精美的说明文档；如果您希望分享的方案可以被更多的用户喜欢，强烈建议您简单了解一下：<a target="_blank" rel="noopener" href="https://www.runoob.com/markdown/md-title.html">Markdown 教程</a></p>
+<p>除去基础的标题样式和字体格式等，目前已支持的特性有：</p>
+<ul>
+<li>可以点击的超链接</li>
+<li>加载网络图片</li>
+<li>代码区域内容复制</li>
+</ul>
+<h4 id="进入-Markdown-编辑模式"><a href="#进入-Markdown-编辑模式" class="headerlink" title="进入 Markdown 编辑模式"></a>进入 Markdown 编辑模式</h4><p>点击方案描述编辑器区域即可</p>
+<h4 id="退出-Markdown-编辑模式"><a href="#退出-Markdown-编辑模式" class="headerlink" title="退出 Markdown 编辑模式"></a>退出 Markdown 编辑模式</h4><p>编辑完成后，点击编辑器左下角的【<i class="fa fa-check fa-emoji" title="check"></i>】按钮即可结束编辑，并进入预览模式</p>
+<h2 id="方案市场-我的"><a href="#方案市场-我的" class="headerlink" title="方案市场/我的"></a>方案市场/我的</h2><p>该面板可以通过面板左上角的按钮切换隐藏状态，并可通过右上角的【<i class="fa fa-user fa-emoji" title="user"></i>】/【<i class="fa fa-shopping-cart fa-emoji" title="shopping-cart"></i>】按钮切换到【我的】/【方案市场】模式</p>
+<h3 id="方案市场"><a href="#方案市场" class="headerlink" title="方案市场"></a>方案市场</h3><p>如果当前为未登录状态，应用打开后右侧面板默认显示【方案市场】，在该模式下，您可以：</p>
+<ol>
+<li>点击【推荐】、【最近更新】、【点赞数】、【下载量】标签，用以切换不同的方案排列顺序</li>
+<li>点击选中列表中的方案，列表下面的描述预览区将更新显示该方案的说明描述</li>
+<li>通过面板底部的操作按钮对当前选中的方案进行【点赞】和【下载】操作</li>
+</ol>
+<h3 id="我的"><a href="#我的" class="headerlink" title="我的"></a>我的</h3><p>如果当前为登录状态，应用打开后右侧面板默认显示【我的】</p>
+<h4 id="登录-注册"><a href="#登录-注册" class="headerlink" title="登录/注册"></a>登录/注册</h4><p>如果当前为未登录状态，进入该面板将显示如下控件：<br><img src="/2022/01/21/dgm-manual/login.webp" alt="login"><br>请在控件中输入您的有效邮箱和8-16位密码，然后点击【登录/注册按钮】</p>
+<h5 id="如果该邮箱尚未完成注册"><a href="#如果该邮箱尚未完成注册" class="headerlink" title="如果该邮箱尚未完成注册"></a>如果该邮箱尚未完成注册</h5><p>则您将会收到一封包含【完成注册链接】的邮件，请在30分钟内访问该链接以完成注册，然后回到这里用刚才输入的邮箱和密码进行登录</p>
+<h5 id="如果该邮箱已经完成注册"><a href="#如果该邮箱已经完成注册" class="headerlink" title="如果该邮箱已经完成注册"></a>如果该邮箱已经完成注册</h5><p>而且邮箱和密码输入无误，面板将显示如下界面：<br><img src="/2022/01/21/dgm-manual/me.webp" alt="me"><br>在该界面，您可以：</p>
+<ol>
+<li>点击【我的上传】、【我的下载】、【我的点赞】标签，用以切换显示不同类型的方案</li>
+<li>点击选中列表中的方案，列表下面的描述预览区将更新显示该方案的说明描述</li>
+<li>通过面板底部的操作按钮对当前选中的方案进行【分享】、【点赞】和【下载】操作</li>
+</ol>
+<h4 id="退出登录"><a href="#退出登录" class="headerlink" title="退出登录"></a>退出登录</h4><p>如果需要退出登录状态，请点击【<i class="fa fa-sign-out fa-emoji" title="sign-out"></i>】按钮</p>
+<h2 id="底部工具条"><a href="#底部工具条" class="headerlink" title="底部工具条"></a>底部工具条</h2><p>应用底部工具条从左到右，依次可以：</p>
+<ul>
+<li>【当前版本】显示当前工具的版本号信息</li>
+<li>【检查更新】检查是否有新版本（仅桌面app可用）</li>
+<li>【语言】切换应用的 UI 界面语言，第一次启动时默认会跟随系统语言</li>
+<li>【主题】切换应用的 UI 界面主题，可选【跟随系统】、【浅色】和【深色】</li>
+<li>【帮助】点击后跳转至本页面显示说明手册</li>
+</ul>
+<h1 id="命令技巧"><a href="#命令技巧" class="headerlink" title="命令技巧"></a>命令技巧</h1><p>我将持续收集一些 DDE 下可用的命令，丰富触摸板手势可以实现的操作以供参考，希望能帮助每个人配置出自己最顺手的手势方案～</p>
+<h1 id="与我联系"><a href="#与我联系" class="headerlink" title="与我联系"></a>与我联系</h1><p>如果在本应用的使用过程中出现了任何问题，或者想要提出建议和意见，欢迎通过如下方式与我联系：<br>Email：<a href="mailto:dx8917312@163.com">dx8917312@163.com</a><br>GitHub：<a target="_blank" rel="noopener" href="https://github.com/debuggerx01/dde_gesture_manager/issues/new">New Issue</a></p>
+<h1 id="源码地址-amp-参考"><a href="#源码地址-amp-参考" class="headerlink" title="源码地址&amp;参考"></a>源码地址&amp;参考</h1><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/debuggerx01/dde_gesture_manager">dde_gesture_manager</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/linuxdeepin/dde-daemon">dde-daemon</a></li>
+</ul>
+</article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%BC%80%E6%BA%90/">开源</a><a class="post-meta__tags" href="/tags/flutter/">flutter</a><a class="post-meta__tags" href="/tags/deepin/">deepin</a></div><div class="post_share"><div class="social-share" data-image="/2022/01/21/dgm-manual/cover.webp" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2022/01/21/dgm-changelog/" title="DDE手势管理器-更新日志"><img class="cover" src="/2022/01/21/dgm-changelog/cover.webp" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">DDE手势管理器-更新日志</div></div></a></div><div class="next-post pull-right"><a href="/2021/08/17/Using-github-actions-to-build-kernel-deb-packages/" title="利用 GitHub Actions 自动构建 Linux 内核为 deb 包"><img class="cover" src="/2021/08/17/Using-github-actions-to-build-kernel-deb-packages/cover.webp" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">利用 GitHub Actions 自动构建 Linux 内核为 deb 包</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2022/01/21/dgm-changelog/" title="DDE手势管理器-更新日志"><img class="cover" src="/2022/01/21/dgm-changelog/cover.webp" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-01-21</div><div class="title">DDE手势管理器-更新日志</div></div></a></div><div><a href="/2020/12/31/manage-i18n-resources-gracefully/" title="优雅地管理国际化资源——i18n-manager"><img class="cover" src="/2020/12/31/manage-i18n-resources-gracefully/cover.webp" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-12-31</div><div class="title">优雅地管理国际化资源——i18n-manager</div></div></a></div><div><a href="/2021/02/18/qrs-detector-for-flutter-in-dart/" title="qrs_detector——Flutter应用中的心电心率识别"><img class="cover" src="/2021/02/18/qrs-detector-for-flutter-in-dart/cover.webp" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-02-18</div><div class="title">qrs_detector——Flutter应用中的心电心率识别</div></div></a></div><div><a href="/2021/04/20/jsonformat4flutter-v0-9-nullsafety/" title="JSONFormat4Flutter v0.9 更新说明"><img class="cover" src="/2021/04/20/jsonformat4flutter-v0-9-nullsafety/cover.webp" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-04-20</div><div class="title">JSONFormat4Flutter v0.9 更新说明</div></div></a></div><div><a href="/2022/04/17/conditional-compilation-using-source-gen-in-flutter-1/" title="在 flutter 中利用 source_gen 实现条件编译（上）"><img class="cover" src="/2022/04/17/conditional-compilation-using-source-gen-in-flutter-1/cover.webp" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-04-17</div><div class="title">在 flutter 中利用 source_gen 实现条件编译（上）</div></div></a></div><div><a href="/2022/06/19/conditional-compilation-using-source-gen-in-flutter-2/" title="在 flutter 中利用 source_gen 实现条件编译（中）"><img class="cover" src="/2022/04/17/conditional-compilation-using-source-gen-in-flutter-1/cover.webp" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-06-19</div><div class="title">在 flutter 中利用 source_gen 实现条件编译（中）</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/images/avatar.webp" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">DebuggerX</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">38</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">31</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/debuggerx01"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A6%82%E8%BF%B0"><span class="toc-number">1.</span> <span class="toc-text">概述</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8"><span class="toc-number">2.</span> <span class="toc-text">使用入门</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E6%89%8B%E5%8A%BF%E7%AE%A1%E7%90%86%E5%99%A8"><span class="toc-number">2.0.1.</span> <span class="toc-text">运行手势管理器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E9%97%AD%E6%89%8B%E5%8A%BF%E7%AE%A1%E7%90%86%E5%99%A8"><span class="toc-number">2.0.2.</span> <span class="toc-text">关闭手势管理器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%9A%E8%BF%87%E6%B5%8F%E8%A7%88%E5%99%A8%E4%BD%BF%E7%94%A8%E5%9C%A8%E7%BA%BF%E7%89%88%E6%89%8B%E5%8A%BF%E7%AE%A1%E7%90%86%E5%99%A8"><span class="toc-number">2.0.3.</span> <span class="toc-text">通过浏览器使用在线版手势管理器</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C%E4%BB%8B%E7%BB%8D"><span class="toc-number">3.</span> <span class="toc-text">操作介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E6%96%B9%E6%A1%88%E7%AE%A1%E7%90%86"><span class="toc-number">3.1.</span> <span class="toc-text">本地方案管理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BA%94%E7%94%A8%E6%89%8B%E5%8A%BF%E6%96%B9%E6%A1%88%E6%97%B6"><span class="toc-number">3.1.1.</span> <span class="toc-text">应用手势方案时</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#APP"><span class="toc-number">3.1.1.1.</span> <span class="toc-text">APP</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Web"><span class="toc-number">3.1.1.2.</span> <span class="toc-text">Web</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%8B%E5%8A%BF%E6%96%B9%E6%A1%88%E7%BC%96%E8%BE%91"><span class="toc-number">3.2.</span> <span class="toc-text">手势方案编辑</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%8B%E5%8A%BF%E7%BC%96%E8%BE%91%E5%99%A8"><span class="toc-number">3.2.1.</span> <span class="toc-text">手势编辑器</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B7%A5%E5%85%B7%E6%9D%A1%E6%93%8D%E4%BD%9C"><span class="toc-number">3.2.1.1.</span> <span class="toc-text">工具条操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8D%95%E4%B8%AA%E6%89%8B%E5%8A%BF%E7%BC%96%E8%BE%91"><span class="toc-number">3.2.1.2.</span> <span class="toc-text">单个手势编辑</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E6%96%B9%E6%A1%88%E5%90%8D%E7%A7%B0"><span class="toc-number">3.2.2.</span> <span class="toc-text">修改方案名称</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%A1%88%E4%B8%8A%E4%BC%A0"><span class="toc-number">3.2.3.</span> <span class="toc-text">方案上传</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%96%E5%86%99%E6%96%B9%E6%A1%88%E6%8F%8F%E8%BF%B0"><span class="toc-number">3.2.4.</span> <span class="toc-text">编写方案描述</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%9B%E5%85%A5-Markdown-%E7%BC%96%E8%BE%91%E6%A8%A1%E5%BC%8F"><span class="toc-number">3.2.4.1.</span> <span class="toc-text">进入 Markdown 编辑模式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%80%80%E5%87%BA-Markdown-%E7%BC%96%E8%BE%91%E6%A8%A1%E5%BC%8F"><span class="toc-number">3.2.4.2.</span> <span class="toc-text">退出 Markdown 编辑模式</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%B9%E6%A1%88%E5%B8%82%E5%9C%BA-%E6%88%91%E7%9A%84"><span class="toc-number">3.3.</span> <span class="toc-text">方案市场&#x2F;我的</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%A1%88%E5%B8%82%E5%9C%BA"><span class="toc-number">3.3.1.</span> <span class="toc-text">方案市场</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%88%91%E7%9A%84"><span class="toc-number">3.3.2.</span> <span class="toc-text">我的</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%99%BB%E5%BD%95-%E6%B3%A8%E5%86%8C"><span class="toc-number">3.3.2.1.</span> <span class="toc-text">登录&#x2F;注册</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%A6%82%E6%9E%9C%E8%AF%A5%E9%82%AE%E7%AE%B1%E5%B0%9A%E6%9C%AA%E5%AE%8C%E6%88%90%E6%B3%A8%E5%86%8C"><span class="toc-number">3.3.2.1.1.</span> <span class="toc-text">如果该邮箱尚未完成注册</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%A6%82%E6%9E%9C%E8%AF%A5%E9%82%AE%E7%AE%B1%E5%B7%B2%E7%BB%8F%E5%AE%8C%E6%88%90%E6%B3%A8%E5%86%8C"><span class="toc-number">3.3.2.1.2.</span> <span class="toc-text">如果该邮箱已经完成注册</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%80%80%E5%87%BA%E7%99%BB%E5%BD%95"><span class="toc-number">3.3.2.2.</span> <span class="toc-text">退出登录</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BA%95%E9%83%A8%E5%B7%A5%E5%85%B7%E6%9D%A1"><span class="toc-number">3.4.</span> <span class="toc-text">底部工具条</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4%E6%8A%80%E5%B7%A7"><span class="toc-number">4.</span> <span class="toc-text">命令技巧</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%8E%E6%88%91%E8%81%94%E7%B3%BB"><span class="toc-number">5.</span> <span class="toc-text">与我联系</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%BA%90%E7%A0%81%E5%9C%B0%E5%9D%80-amp-%E5%8F%82%E8%80%83"><span class="toc-number">6.</span> <span class="toc-text">源码地址&amp;参考</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/12/08/weekly-todo-app/" title="每周TODO——个人向待办管理工具"><img src="/2024/12/08/weekly-todo-app/cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="每周TODO——个人向待办管理工具"/></a><div class="content"><a class="title" href="/2024/12/08/weekly-todo-app/" title="每周TODO——个人向待办管理工具">每周TODO——个人向待办管理工具</a><time datetime="2024-12-08T06:43:10.000Z" title="发表于 2024-12-08 14:43:10">2024-12-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/10/07/map-scancodes-to-keycodes/" title="Linux通用键位修改"><img src="/2022/03/27/set-global-keybindings-via-xbindkeys/cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Linux通用键位修改"/></a><div class="content"><a class="title" href="/2023/10/07/map-scancodes-to-keycodes/" title="Linux通用键位修改">Linux通用键位修改</a><time datetime="2023-10-07T09:18:05.000Z" title="发表于 2023-10-07 17:18:05">2023-10-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/09/20/fcitx5-customizer/" title="fcitx5_customizer —— 一个让 Fcitx5 更符合简中用户使用习惯的优化脚本"><img src="/2023/09/20/fcitx5-customizer/cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="fcitx5_customizer —— 一个让 Fcitx5 更符合简中用户使用习惯的优化脚本"/></a><div class="content"><a class="title" href="/2023/09/20/fcitx5-customizer/" title="fcitx5_customizer —— 一个让 Fcitx5 更符合简中用户使用习惯的优化脚本">fcitx5_customizer —— 一个让 Fcitx5 更符合简中用户使用习惯的优化脚本</a><time datetime="2023-09-20T04:24:21.000Z" title="发表于 2023-09-20 12:24:21">2023-09-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/07/18/remote-system-monitor/" title="远程监视器——使用Flutter/Dart开发的Linux系统状态监视APP"><img src="/2023/07/18/remote-system-monitor/cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="远程监视器——使用Flutter/Dart开发的Linux系统状态监视APP"/></a><div class="content"><a class="title" href="/2023/07/18/remote-system-monitor/" title="远程监视器——使用Flutter/Dart开发的Linux系统状态监视APP">远程监视器——使用Flutter/Dart开发的Linux系统状态监视APP</a><time datetime="2023-07-18T01:36:03.000Z" title="发表于 2023-07-18 09:36:03">2023-07-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/06/20/conditional-compilation-using-source-gen-in-flutter-3/" title="在 flutter 中利用 source_gen 实现条件编译（下）"><img src="/2022/04/17/conditional-compilation-using-source-gen-in-flutter-1/cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="在 flutter 中利用 source_gen 实现条件编译（下）"/></a><div class="content"><a class="title" href="/2023/06/20/conditional-compilation-using-source-gen-in-flutter-3/" title="在 flutter 中利用 source_gen 实现条件编译（下）">在 flutter 中利用 source_gen 实现条件编译（下）</a><time datetime="2023-06-20T14:36:52.000Z" title="发表于 2023-06-20 22:36:52">2023-06-20</time></div></div></div></div></div></div></main><footer id="footer" style="background: linear-gradient(20deg, #0062be, #9855e1, #6f42c1, #541bba)"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By DebuggerX</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script src="/custom/custom.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>

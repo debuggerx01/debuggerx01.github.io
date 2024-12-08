@@ -1,0 +1,286 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>DebuggerX's Blog</title><meta name="author" content="DebuggerX"><meta name="copyright" content="DebuggerX"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta name="description"><link rel="shortcut icon" href="/images/favicon.png"><link rel="canonical" href="http://blog.debuggerx.com/page/4/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.1.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?45acc9824a216a8f1792b419eb91f090";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'DebuggerX\'s Blog',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2024-12-09 02:41:37'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="referrer" content="no-referrer-when-downgrade" /><link rel="stylesheet" href="/md_editor/css/editormd.min.css"><link rel="stylesheet" href="/custom/custom.css"><meta name="generator" content="Hexo 6.0.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/images/avatar.webp" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">38</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">31</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 文档</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/"><i class="fa-fw fas fa-book"></i><span> Hexo</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://butterfly.js.org/categories/Docs%E6%96%87%E6%AA%94/"><i class="fa-fw fas fa-paint-brush"></i><span> Butterfly</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-smile-o"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/videos/"><i class="fa-fw fas fa-play-circle"></i><span> 视频</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="//debuggerx.com/emulator_js"><i class="fa-fw fas fa-gamepad"></i><span> 游戏</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-tools"></i><span> 工具</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/md_editor/"><i class="fa-fw fas fa-pen"></i><span> MDEditor</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.debuggerx.com/dgm_web"><i class="fa-fw fas fa-hand-peace"></i><span> DDE手势管理器</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('/images/bg.webp')"><nav id="nav"><span id="blog-info"><a href="/" title="DebuggerX's Blog"><span class="site-name">DebuggerX's Blog</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 文档</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/"><i class="fa-fw fas fa-book"></i><span> Hexo</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://butterfly.js.org/categories/Docs%E6%96%87%E6%AA%94/"><i class="fa-fw fas fa-paint-brush"></i><span> Butterfly</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-smile-o"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/videos/"><i class="fa-fw fas fa-play-circle"></i><span> 视频</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="//debuggerx.com/emulator_js"><i class="fa-fw fas fa-gamepad"></i><span> 游戏</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-tools"></i><span> 工具</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/md_editor/"><i class="fa-fw fas fa-pen"></i><span> MDEditor</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.debuggerx.com/dgm_web"><i class="fa-fw fas fa-hand-peace"></i><span> DDE手势管理器</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">DebuggerX's Blog</h1><div id="site-subtitle"><span id="subtitle"></span></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/2020/11/30/ko-no-light-novel-ga-su-goi-suzumiya-series/" title="这本轻小说真厉害！——『凉宫春日系列』"><img class="post-bg" src="/2020/11/30/ko-no-light-novel-ga-su-goi-suzumiya-series/sos.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="这本轻小说真厉害！——『凉宫春日系列』"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/11/30/ko-no-light-novel-ga-su-goi-suzumiya-series/" title="这本轻小说真厉害！——『凉宫春日系列』">这本轻小说真厉害！——『凉宫春日系列』</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-11-30T15:15:14.000Z" title="发表于 2020-11-30 23:15:14">2020-11-30</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%8A%80%E6%9C%AF%E4%B9%8B%E5%A4%96/">技术之外</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%AE%89%E5%88%A9%E5%90%91/">安利向</a></span></div><div class="content">
+  老实说，要到几岁才开始不相信圣诞老人的存在……这类无聊的话题对我而言，根本不痛不痒的。不过，讲到我从几岁起开始不相信圣诞老人就是那个穿着红衣服的老公公时，我能确定地说，我根本打从一开始就不相信。  我知道幼稚园圣诞节庆祝会时出现的圣诞老人是假的，回溯记忆，还能记起周围的幼稚园小朋友都一脸不信任地望着假扮圣诞老人的园长老师。  即使没有撞见老妈正在亲吻圣诞老公公，机灵的我也老早就怀疑只在圣诞节工作的老爷爷是否真的存在了。不过，我却是过了很久以后，才发现外星人、幽灵、妖怪、超能力者以及特摄、动画里头，那些与邪恶组织战斗的英雄们并不存在这世上。  不，说不定我早就发现了，只不过一直不想承认而已。因为，在我的内心深处，是十分渴望那些外星人、幽灵、妖怪、超能力者以及邪恶组织突然出现在眼前的。  和我生活的这个普通世界相比，特摄、动画里头所描绘的世界，反而更有魅力。  我也想活在那种世界里！  不过，现实却是意外地残酷。  现实的生活中，并没有半个转学生转来我班上，我也没看过UFO……就算去了地方上常出现幽灵或妖怪的灵异地点也连个鬼影都没有……花了两小时盯着桌上的铅笔，它却连一微米都没移动… ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2020/11/29/suggest-Linux-users-to-try-kvm-virtual-machine/" title="建议Linux用户尝试下kvm虚拟机"><img class="post-bg" src="/2020/11/29/suggest-Linux-users-to-try-kvm-virtual-machine/cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="建议Linux用户尝试下kvm虚拟机"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/11/29/suggest-Linux-users-to-try-kvm-virtual-machine/" title="建议Linux用户尝试下kvm虚拟机">建议Linux用户尝试下kvm虚拟机</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-11-28T20:27:33.000Z" title="发表于 2020-11-29 04:27:33">2020-11-29</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/">奇技淫巧</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/kvm/">kvm</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/linux/">linux</a></span></div><div class="content">
+作为 Linux 用户，不管是 IT 开发，还是普通的爱好者，出于种种原因总是离不开虚拟机软件。由于某些原因
+  某些原因 (其实就是高中那会痴迷仙剑，先是因为想在网吧电脑上玩仙剑三外传，但是当时仙三外安装过程中必须重启电脑，网吧电脑重启就自动还原了，于是只能研究哪个虚拟机可以比较好的支持3D游戏；后来又逐渐接触到了编程，想要通过给我当时使用的电子词典编译一个 DoxBox 玩原版的仙剑1……这样回头看来，今天会走上 IT 这条路就是因为仙剑也说不定哎😏)我很早就接触过各种虚拟机软件，到目前为止或多或少几乎使用过所有常见的虚拟机软件或平台，包括大家最熟悉的 VMWare、VBox，windows 上曾经的 Virtual PC 和如今系统自带的 Hyper-V，MacOS 上的 Parallels Desktop，以及虚拟化平台 ESXi 和 Proxmox VE 等……这些软件在各自平台和特定使用场景下各有其优势，但是现在，我个人使用的 Linux 上唯一在用的虚拟机软件，就是今天的主角—— KVM
+
+KVM的优点
+安装方便。 从 KVM 的全称：Kernel-based Vir ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2020/11/16/enhanced-script-of-http-server-by-python/" title="利用Python实现的局域网内跨设备文件上传下载及双向剪切板操作"><img class="post-bg" src="/2020/11/16/enhanced-script-of-http-server-by-python/cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="利用Python实现的局域网内跨设备文件上传下载及双向剪切板操作"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/11/16/enhanced-script-of-http-server-by-python/" title="利用Python实现的局域网内跨设备文件上传下载及双向剪切板操作">利用Python实现的局域网内跨设备文件上传下载及双向剪切板操作</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-11-16T15:58:18.000Z" title="发表于 2020-11-16 23:58:18">2020-11-16</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/">实用工具</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/python/">python</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/termux/">termux</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/web/">web</a></span></div><div class="content">需求分析
+短距离的多设备文件、信息分享，我们都有哪些选择？
+
+
+物理流U盘、移动硬盘：电脑间数据拷贝；数据线：电脑和手机间数据拷贝
+
+通讯软件流例如 QQ、微信、钉钉，还有曾经在局域网流行的飞秋、飞鸽传书等等
+
+分享服务流开启各种远程分享服务，如 smb、ftp、webdav 等
+
+web应用流如 sharedrop.io
+
+黑科技流如华为Share一碰传、小米互传、苹果 Airdrop 等
+
+
+这么多的流派，各自有什么优缺点呢：
+
+    .table-wrap table th, .table-wrap table td {
+        width: 15%;
+    }
+
+
+
+
+
+
+物理流
+通讯软件流
+飞秋\飞鸽
+分享服务流
+web应用流
+黑科技流
+
+
+
+优点
+速度快，稳定性好，数据量大时优势明显
+装机量大，使用方便，可以远程传文件，尤其是信息发送优势巨大
+专为局域网共享设计，速度快，无需帐号即可使用
+家庭或企业环境使用优势巨大，扩展性强
+使用便捷，跨平台效果好
+Cool！！全家桶用户使用体验优异
+
+
+缺点
+需要额外硬件，且不同设备需求不同，U盘、移动硬盘有文件格式问题，数据 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2020/11/15/use-backdrop-filter-to-blur-background/" title="用 backdrop-filter 实现背景模糊"><img class="post-bg" src="/2020/11/15/use-backdrop-filter-to-blur-background/cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="用 backdrop-filter 实现背景模糊"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/11/15/use-backdrop-filter-to-blur-background/" title="用 backdrop-filter 实现背景模糊">用 backdrop-filter 实现背景模糊</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-11-15T15:49:08.000Z" title="发表于 2020-11-15 23:49:08">2020-11-15</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/">奇技淫巧</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%89%8D%E7%AB%AF/">前端</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/css/">css</a></span></div><div class="content">
+博客使用的 Butterfly 主题好看是好看，但是果然太费图片了……特别是有时候文章使用的 cover 图清晰度不是很高，在大屏幕上看默认的效果就可能很糊，比如之前文章里用的这张图：
+
+
+如果能加上模糊效果的话，就能在一定程度上掩盖图片分辨率不足的缺陷，显得更加美观。
+一般实现背景模糊，直接在元素上加 filter: blur(3px); 的样式就可以了，比如：
+
+    .demo_img {
+        width: 50%;
+        display: flex;
+        margin: auto;
+    }
+    .demo_img > span {
+        margin: 50px auto;
+    }
+
+
+
+
+
+查看源码
+123456&lt;style&gt;    .demo_img {        filter: blur(3px);    }&lt;/style&gt;&lt;img class="demo_img" src='/images/bg.webp'/&gt;
+
+
+但是这种方式有一个很大的问题，就是如果给元素设置模糊，对 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2020/11/14/use-table-layout-to-solve-a-display-issue/" title="用 table 布局解决元素 border 空隙的 bug"><img class="post-bg" src="/2020/11/14/use-table-layout-to-solve-a-display-issue/cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="用 table 布局解决元素 border 空隙的 bug"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/11/14/use-table-layout-to-solve-a-display-issue/" title="用 table 布局解决元素 border 空隙的 bug">用 table 布局解决元素 border 空隙的 bug</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-11-14T08:28:47.000Z" title="发表于 2020-11-14 16:28:47">2020-11-14</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/">奇技淫巧</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%89%8D%E7%AB%AF/">前端</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/css/">css</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/bug/">bug</a></span></div><div class="content">BUG介绍有一个前端产品，需求是需要给一个文本块加上个角标，虽然产品没给具体样式上的要求，但是作为直男 用仅存的一点点细胞，还是花了点时间从网上找来一段用 css 实现的角标，感觉还行叭：
+
+
+
+
+查看源码
+123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;&lt;meta http-equiv="Content-Type" content="text/html;charset=utf-8"&gt;    &lt;style&gt;      body {        width: 100vw;        height: 100vh;        background: #1b1b1b;      }      #container {        ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2020/11/11/learn-about-digitwise-operation/" title="一段位运算代码的理解记录"><img class="post-bg" src="/2020/11/11/learn-about-digitwise-operation/cover.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="一段位运算代码的理解记录"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/11/11/learn-about-digitwise-operation/" title="一段位运算代码的理解记录">一段位运算代码的理解记录</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-11-11T15:03:02.000Z" title="发表于 2020-11-11 23:03:02">2020-11-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%A0%81%E6%B5%B7%E6%97%A0%E6%B6%AF/">码海无涯</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E7%BC%96%E7%A8%8B/">编程</a></span></div><div class="content">
+平时位运算、二进制操作什么的用到的很少，最近工作中要为 Flutter 的 APP 对接一个 BLE 设备，其中涉及到了相关的内容，简单记录下对一段代码的理解 
+
+代码片段1234567891011121314151617181920212223242526272829303132333435public static int getBytesIndex(int bitPos) {	return bitPos / 8;}public static int getOffset(int bitPos) {	return bitPos % 8;}private int[] parserHeartData(byte[] data) {	int pIndex = 0;	byte[] samp = new byte[12];	for(int i = 4; i &lt;= 15; ++i) {		byte tem = data[getBytesIndex(i)];		samp[pIndex++] = tem &gt;&gt; 7 - getOffset(i) &amp; 1;	}	int[] po ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2020/11/08/an-awesome-markdown-editor-for-hexo/" title="为博客加入一个好用的在线MD编辑工具"><img class="post-bg" src="/2020/11/08/an-awesome-markdown-editor-for-hexo/Editor.md.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="为博客加入一个好用的在线MD编辑工具"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/11/08/an-awesome-markdown-editor-for-hexo/" title="为博客加入一个好用的在线MD编辑工具">为博客加入一个好用的在线MD编辑工具</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-11-08T14:13:48.000Z" title="发表于 2020-11-08 22:13:48">2020-11-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/">实用工具</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/markdown/">markdown</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/hexo/">hexo</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%BC%80%E6%BA%90/">开源</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%89%8D%E7%AB%AF/">前端</a></span></div><div class="content">
+这两天好好配置了下本博客，Hexo 配合 Butterfly 主题 开箱提供了很多好用的功能特性，几乎满足了我对一个博客和知识管理平台的所有功能和视觉上的需求，很满意 ^_^ —— 唯独有一个问题，Hexo 使用 markdown 文本来生成静态页面，所以一个方便好用的 MD 编辑器就变得非常有必要了。长久以来不喜欢写 markdown 文档的两大原因就是没找到好用的文档管理工具和编辑器，现在管理的问题解决了，是时候花功夫找一个好用的编辑器了。
+
+
+本地编辑器用过各种 IDE 的插件和 Typora，感觉都不是很好用，而且为了能加到 blog 上方便随时打开浏览器就能写作，于是决定找一个好用的在线编辑器。之前用 掘金 的编辑器感觉还是很顺手的，尤其喜欢左右实时预览，所见即所得的写作体验，它使用的是一个名为 ByteMD 的项目，但是看了下感觉功能还不够丰富……
+
+初识 Editor.md直到找到了这个 Editor.md，眼前一亮，功能丰富样式也好看，star 数更是与 ByteMD 拉开了几个数量级，虽然已经很久没有更新了，但足够好用，很适合直接引入到网页里
+下载直接从 githu ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2020/11/07/add-request-and-response-log-for-nginx/" title="为nginx日志增加请求体及响应内容记录"><img class="post-bg" src="/2020/11/07/add-request-and-response-log-for-nginx/nginx.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="为nginx日志增加请求体及响应内容记录"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/11/07/add-request-and-response-log-for-nginx/" title="为nginx日志增加请求体及响应内容记录">为nginx日志增加请求体及响应内容记录</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-11-07T14:28:47.000Z" title="发表于 2020-11-07 22:28:47">2020-11-07</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/">奇技淫巧</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/nginx/">nginx</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E8%BF%90%E7%BB%B4/">运维</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%85%A8%E6%A0%88/">全栈</a></span></div><div class="content">
+为nginx日志增加请求体及响应内容记录，一方面可以记录网站或者nginx代理的某服务详细的请求/响应内容，以便发现bug时可以回溯追查，另一方面可以配合gotty实现实时的请求数据显示，从而在开发过程中省去了打日志或者抓包的麻烦。
+
+安装Lua-Nginx-Moduledebian系很简单，直接通过包管理就可以安装：
+1sudo apt install libnginx-mod-http-lua
+Redhat系就比较烦，没找到提供该模块的repo，但是通过源码编译是不可能编译的，这辈子都不可能用源码编译的←_←，参考文档 https://github.com/openresty/lua-nginx-module#installation ，可以安装 OpenResty 获得开箱即用的 Nginx 和 ngx_lua 模块，根据 安装文档 ，CentOS的安装方法：
+123456789# add the yum repo:wget https://openresty.org/package/centos/openresty.reposudo mv openresty.repo /et ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/3/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/#content-inner">3</a><span class="page-number current">4</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/images/avatar.webp" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">DebuggerX</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">38</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">31</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/debuggerx01"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/12/08/weekly-todo-app/" title="每周TODO——个人向待办管理工具"><img src="/2024/12/08/weekly-todo-app/cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="每周TODO——个人向待办管理工具"/></a><div class="content"><a class="title" href="/2024/12/08/weekly-todo-app/" title="每周TODO——个人向待办管理工具">每周TODO——个人向待办管理工具</a><time datetime="2024-12-08T06:43:10.000Z" title="发表于 2024-12-08 14:43:10">2024-12-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/10/07/map-scancodes-to-keycodes/" title="Linux通用键位修改"><img src="/2022/03/27/set-global-keybindings-via-xbindkeys/cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Linux通用键位修改"/></a><div class="content"><a class="title" href="/2023/10/07/map-scancodes-to-keycodes/" title="Linux通用键位修改">Linux通用键位修改</a><time datetime="2023-10-07T09:18:05.000Z" title="发表于 2023-10-07 17:18:05">2023-10-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/09/20/fcitx5-customizer/" title="fcitx5_customizer —— 一个让 Fcitx5 更符合简中用户使用习惯的优化脚本"><img src="/2023/09/20/fcitx5-customizer/cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="fcitx5_customizer —— 一个让 Fcitx5 更符合简中用户使用习惯的优化脚本"/></a><div class="content"><a class="title" href="/2023/09/20/fcitx5-customizer/" title="fcitx5_customizer —— 一个让 Fcitx5 更符合简中用户使用习惯的优化脚本">fcitx5_customizer —— 一个让 Fcitx5 更符合简中用户使用习惯的优化脚本</a><time datetime="2023-09-20T04:24:21.000Z" title="发表于 2023-09-20 12:24:21">2023-09-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/07/18/remote-system-monitor/" title="远程监视器——使用Flutter/Dart开发的Linux系统状态监视APP"><img src="/2023/07/18/remote-system-monitor/cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="远程监视器——使用Flutter/Dart开发的Linux系统状态监视APP"/></a><div class="content"><a class="title" href="/2023/07/18/remote-system-monitor/" title="远程监视器——使用Flutter/Dart开发的Linux系统状态监视APP">远程监视器——使用Flutter/Dart开发的Linux系统状态监视APP</a><time datetime="2023-07-18T01:36:03.000Z" title="发表于 2023-07-18 09:36:03">2023-07-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/06/20/conditional-compilation-using-source-gen-in-flutter-3/" title="在 flutter 中利用 source_gen 实现条件编译（下）"><img src="/2022/04/17/conditional-compilation-using-source-gen-in-flutter-1/cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="在 flutter 中利用 source_gen 实现条件编译（下）"/></a><div class="content"><a class="title" href="/2023/06/20/conditional-compilation-using-source-gen-in-flutter-3/" title="在 flutter 中利用 source_gen 实现条件编译（下）">在 flutter 中利用 source_gen 实现条件编译（下）</a><time datetime="2023-06-20T14:36:52.000Z" title="发表于 2023-06-20 22:36:52">2023-06-20</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/"><span class="card-category-list-name">奇技淫巧</span><span class="card-category-list-count">14</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/"><span class="card-category-list-name">实用工具</span><span class="card-category-list-count">15</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E4%B9%8B%E5%A4%96/"><span class="card-category-list-name">技术之外</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%A0%81%E6%B5%B7%E6%97%A0%E6%B6%AF/"><span class="card-category-list-name">码海无涯</span><span class="card-category-list-count">5</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/nginx/" style="font-size: 1.15em; color: rgb(146, 64, 112)">nginx</a><a href="/tags/%E8%BF%90%E7%BB%B4/" style="font-size: 1.25em; color: rgb(100, 180, 120)">运维</a><a href="/tags/%E5%85%A8%E6%A0%88/" style="font-size: 1.15em; color: rgb(2, 142, 114)">全栈</a><a href="/tags/markdown/" style="font-size: 1.15em; color: rgb(39, 38, 132)">markdown</a><a href="/tags/hexo/" style="font-size: 1.15em; color: rgb(32, 168, 87)">hexo</a><a href="/tags/%E5%BC%80%E6%BA%90/" style="font-size: 1.45em; color: rgb(110, 184, 29)">开源</a><a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 1.35em; color: rgb(89, 57, 160)">前端</a><a href="/tags/python/" style="font-size: 1.15em; color: rgb(20, 123, 139)">python</a><a href="/tags/termux/" style="font-size: 1.15em; color: rgb(55, 50, 131)">termux</a><a href="/tags/web/" style="font-size: 1.18em; color: rgb(188, 16, 190)">web</a><a href="/tags/%E5%AE%89%E5%88%A9%E5%90%91/" style="font-size: 1.22em; color: rgb(197, 75, 171)">安利向</a><a href="/tags/%E7%BC%96%E7%A8%8B/" style="font-size: 1.25em; color: rgb(146, 156, 139)">编程</a><a href="/tags/kvm/" style="font-size: 1.15em; color: rgb(111, 196, 76)">kvm</a><a href="/tags/linux/" style="font-size: 1.38em; color: rgb(71, 21, 122)">linux</a><a href="/tags/css/" style="font-size: 1.22em; color: rgb(29, 72, 9)">css</a><a href="/tags/bug/" style="font-size: 1.22em; color: rgb(37, 1, 6)">bug</a><a href="/tags/flutter/" style="font-size: 1.42em; color: rgb(151, 143, 184)">flutter</a><a href="/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/" style="font-size: 1.32em; color: rgb(32, 180, 52)">自动化</a><a href="/tags/QRS%E6%B3%A2%E6%A3%80%E6%B5%8B%E7%AE%97%E6%B3%95/" style="font-size: 1.15em; color: rgb(95, 5, 167)">QRS波检测算法</a><a href="/tags/dart/" style="font-size: 1.28em; color: rgb(57, 117, 94)">dart</a><a href="/tags/%E6%8A%98%E8%85%BE/" style="font-size: 1.18em; color: rgb(105, 111, 42)">折腾</a><a href="/tags/Chrome/" style="font-size: 1.18em; color: rgb(49, 106, 176)">Chrome</a><a href="/tags/%E6%8F%92%E4%BB%B6/" style="font-size: 1.15em; color: rgb(74, 148, 25)">插件</a><a href="/tags/GitHub/" style="font-size: 1.15em; color: rgb(111, 62, 47)">GitHub</a><a href="/tags/deepin/" style="font-size: 1.18em; color: rgb(52, 6, 105)">deepin</a><a href="/tags/xbindkeys/" style="font-size: 1.15em; color: rgb(79, 91, 159)">xbindkeys</a><a href="/tags/docker/" style="font-size: 1.15em; color: rgb(74, 108, 110)">docker</a><a href="/tags/vim/" style="font-size: 1.15em; color: rgb(87, 139, 151)">vim</a><a href="/tags/shell/" style="font-size: 1.18em; color: rgb(61, 7, 46)">shell</a><a href="/tags/Easystroke/" style="font-size: 1.15em; color: rgb(6, 38, 52)">Easystroke</a><a href="/tags/fcitx5/" style="font-size: 1.15em; color: rgb(105, 124, 91)">fcitx5</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
+    <i class="fas fa-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/12/"><span class="card-archive-list-date">十二月 2024</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/10/"><span class="card-archive-list-date">十月 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/09/"><span class="card-archive-list-date">九月 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/07/"><span class="card-archive-list-date">七月 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/06/"><span class="card-archive-list-date">六月 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/06/"><span class="card-archive-list-date">六月 2022</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/05/"><span class="card-archive-list-date">五月 2022</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/04/"><span class="card-archive-list-date">四月 2022</span><span class="card-archive-list-count">1</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">38</div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">78.1k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2024-12-08T18:41:35.890Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer" style="background: linear-gradient(20deg, #0062be, #9855e1, #6f42c1, #541bba)"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By DebuggerX</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>window.typedJSFn = {
+  init: (str) => {
+    window.typed = new Typed('#subtitle', Object.assign({
+      strings: str,
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50,
+    }, null))
+  },
+  run: (subtitleType) => {
+    if (true) {
+      if (typeof Typed === 'function') {
+        subtitleType()
+      } else {
+        getScript('https://cdn.staticfile.org/typed.js/2.0.12/typed.min.js').then(subtitleType)
+      }
+    } else {
+      subtitleType()
+    }
+  }
+}
+</script><script>function subtitleType () {
+  if (true) {
+    typedJSFn.init(["人类从历史中学到的唯一教训","就是人类无法从历史中学到任何教训"])
+  } else {
+    document.getElementById("subtitle").textContent = "人类从历史中学到的唯一教训"
+  }
+}
+typedJSFn.run(subtitleType)</script></div><script src="/custom/custom.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>

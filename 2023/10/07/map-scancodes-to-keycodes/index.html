@@ -1,0 +1,166 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Linux通用键位修改 | DebuggerX's Blog</title><meta name="author" content="DebuggerX"><meta name="copyright" content="DebuggerX"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta name="description" content="下面的修改主要是因为：  现在习惯使用84配列的机械键盘，该配列下Insert键常被精简为需要和Fn键组合触发，这样使用IDE时某些快捷键不是很方便使用，反倒是PrtSc这个不常用的按键被保留了，所以把PrtSc键映射为Insert可以提高效率 现在使用Fcitx5，虽然右侧Shift可以设置为输入"><link rel="shortcut icon" href="/images/favicon.png"><link rel="canonical" href="http://blog.debuggerx.com/2023/10/07/map-scancodes-to-keycodes/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.1.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?45acc9824a216a8f1792b419eb91f090";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Linux通用键位修改',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2024-11-20 17:31:29'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="referrer" content="no-referrer-when-downgrade" /><link rel="stylesheet" href="/md_editor/css/editormd.min.css"><link rel="stylesheet" href="/custom/custom.css"><meta name="generator" content="Hexo 6.0.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/images/avatar.webp" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">38</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">31</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 文档</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/"><i class="fa-fw fas fa-book"></i><span> Hexo</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://butterfly.js.org/categories/Docs%E6%96%87%E6%AA%94/"><i class="fa-fw fas fa-paint-brush"></i><span> Butterfly</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-smile-o"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/videos/"><i class="fa-fw fas fa-play-circle"></i><span> 视频</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="//debuggerx.com/emulator_js"><i class="fa-fw fas fa-gamepad"></i><span> 游戏</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-tools"></i><span> 工具</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/md_editor/"><i class="fa-fw fas fa-pen"></i><span> MDEditor</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.debuggerx.com/dgm_web"><i class="fa-fw fas fa-hand-peace"></i><span> DDE手势管理器</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/2022/03/27/set-global-keybindings-via-xbindkeys/cover.webp')"><nav id="nav"><span id="blog-info"><a href="/" title="DebuggerX's Blog"><span class="site-name">DebuggerX's Blog</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 文档</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/"><i class="fa-fw fas fa-book"></i><span> Hexo</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://butterfly.js.org/categories/Docs%E6%96%87%E6%AA%94/"><i class="fa-fw fas fa-paint-brush"></i><span> Butterfly</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-smile-o"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/videos/"><i class="fa-fw fas fa-play-circle"></i><span> 视频</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="//debuggerx.com/emulator_js"><i class="fa-fw fas fa-gamepad"></i><span> 游戏</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-tools"></i><span> 工具</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/md_editor/"><i class="fa-fw fas fa-pen"></i><span> MDEditor</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.debuggerx.com/dgm_web"><i class="fa-fw fas fa-hand-peace"></i><span> DDE手势管理器</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Linux通用键位修改</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-10-07T09:18:05.000Z" title="发表于 2023-10-07 17:18:05">2023-10-07</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-11-20T09:31:29.931Z" title="更新于 2024-11-20 17:31:29">2024-11-20</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/">奇技淫巧</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">309</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Linux通用键位修改"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>下面的修改主要是因为：</p>
+<ol>
+<li>现在习惯使用84配列的机械键盘，该配列下Insert键常被精简为需要和Fn键组合触发，这样使用IDE时某些快捷键不是很方便使用，反倒是PrtSc这个不常用的按键被保留了，所以把PrtSc键映射为Insert可以提高效率</li>
+<li>现在使用Fcitx5，虽然右侧Shift可以设置为输入法切换按键，但是无法将右Alt、Ctrl键设为热键；同时由于开始尝试双拼，v这个默认用于触发快速输入的按键在双拼模式下需要使用，所以把右Alt键映射为F16，这样即可实现用右Alt进入快速输入模式</li>
+</ol>
+<p>主要参考文章：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.bilibili.com/read/cv5156572/">Linux通用键位修改（中）-实际操作</a></li>
+<li><a target="_blank" rel="noopener" href="https://harttle.land/2019/08/08/linux-keymap-on-macbook.html#header-2">ArchLinux 键盘映射：交换 CapsLock 和 Ctrl</a></li>
+</ul>
+<p>修改操作：</p>
+<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">将PrtSc键映射为Insert</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">将右Alt键映射为F16(XF86Launch7)</span></span><br><span class="line">sudo tee /etc/udev/hwdb.d/90-custom-keyboard.hwdb &amp;&gt;/dev/null &lt;&lt;EOF</span><br><span class="line">evdev:input:b0003*</span><br><span class="line">  KEYBOARD_KEY_70046=insert</span><br><span class="line">  KEYBOARD_KEY_700e6=f16</span><br><span class="line">EOF</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">更新hwdb并触发生效</span></span><br><span class="line">sudo systemd-hwdb update &amp;&amp; sudo udevadm trigger</span><br></pre></td></tr></tbody></table></figure>
+
+<p>上面的配置是匹配所有USB键盘，如果需要匹配笔记本电脑内置键盘，可以尝试<code>evdev:atkdb:dim*</code></p>
+</article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/linux/">linux</a></div><div class="post_share"><div class="social-share" data-image="/2022/03/27/set-global-keybindings-via-xbindkeys/cover.webp" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2024/12/08/weekly-todo-app/" title="每周TODO——个人向待办管理工具"><img class="cover" src="/2024/12/08/weekly-todo-app/cover.webp" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">每周TODO——个人向待办管理工具</div></div></a></div><div class="next-post pull-right"><a href="/2023/09/20/fcitx5-customizer/" title="fcitx5_customizer —— 一个让 Fcitx5 更符合简中用户使用习惯的优化脚本"><img class="cover" src="/2023/09/20/fcitx5-customizer/cover.webp" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">fcitx5_customizer —— 一个让 Fcitx5 更符合简中用户使用习惯的优化脚本</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2020/11/29/suggest-Linux-users-to-try-kvm-virtual-machine/" title="建议Linux用户尝试下kvm虚拟机"><img class="cover" src="/2020/11/29/suggest-Linux-users-to-try-kvm-virtual-machine/cover.webp" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-11-29</div><div class="title">建议Linux用户尝试下kvm虚拟机</div></div></a></div><div><a href="/2021/01/13/batch-convert-pictures-to-webp-format/" title="批量转换图片为webp格式"><img class="cover" src="/2021/01/13/batch-convert-pictures-to-webp-format/cover.webp" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-01-13</div><div class="title">批量转换图片为webp格式</div></div></a></div><div><a href="/2021/01/10/make-deepin-terminal-quake-mode-faster/" title="不满新版深度终端的动画速度，动手修改编译一个版本"><img class="cover" src="/2021/01/10/make-deepin-terminal-quake-mode-faster/cover.webp" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-01-10</div><div class="title">不满新版深度终端的动画速度，动手修改编译一个版本</div></div></a></div><div><a href="/2021/07/07/Modify-the-linux-kernel-to-reduce-the-boot-speed-by-about-30-seconds/" title="修改 Linux 内核使系统启动时间缩短约 30 秒"><img class="cover" src="/2021/07/07/Modify-the-linux-kernel-to-reduce-the-boot-speed-by-about-30-seconds/cover.webp" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-07-07</div><div class="title">修改 Linux 内核使系统启动时间缩短约 30 秒</div></div></a></div><div><a href="/2021/08/17/Using-github-actions-to-build-kernel-deb-packages/" title="利用 GitHub Actions 自动构建 Linux 内核为 deb 包"><img class="cover" src="/2021/08/17/Using-github-actions-to-build-kernel-deb-packages/cover.webp" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-08-17</div><div class="title">利用 GitHub Actions 自动构建 Linux 内核为 deb 包</div></div></a></div><div><a href="/2022/03/27/set-global-keybindings-via-xbindkeys/" title="利用 Xbindkeys 设置全局快捷键&#x2F;一键切换输入法"><img class="cover" src="/2022/03/27/set-global-keybindings-via-xbindkeys/cover.webp" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-03-27</div><div class="title">利用 Xbindkeys 设置全局快捷键&#x2F;一键切换输入法</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/images/avatar.webp" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">DebuggerX</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">38</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">31</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/debuggerx01"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/12/08/weekly-todo-app/" title="每周TODO——个人向待办管理工具"><img src="/2024/12/08/weekly-todo-app/cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="每周TODO——个人向待办管理工具"/></a><div class="content"><a class="title" href="/2024/12/08/weekly-todo-app/" title="每周TODO——个人向待办管理工具">每周TODO——个人向待办管理工具</a><time datetime="2024-12-08T06:43:10.000Z" title="发表于 2024-12-08 14:43:10">2024-12-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/10/07/map-scancodes-to-keycodes/" title="Linux通用键位修改"><img src="/2022/03/27/set-global-keybindings-via-xbindkeys/cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Linux通用键位修改"/></a><div class="content"><a class="title" href="/2023/10/07/map-scancodes-to-keycodes/" title="Linux通用键位修改">Linux通用键位修改</a><time datetime="2023-10-07T09:18:05.000Z" title="发表于 2023-10-07 17:18:05">2023-10-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/09/20/fcitx5-customizer/" title="fcitx5_customizer —— 一个让 Fcitx5 更符合简中用户使用习惯的优化脚本"><img src="/2023/09/20/fcitx5-customizer/cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="fcitx5_customizer —— 一个让 Fcitx5 更符合简中用户使用习惯的优化脚本"/></a><div class="content"><a class="title" href="/2023/09/20/fcitx5-customizer/" title="fcitx5_customizer —— 一个让 Fcitx5 更符合简中用户使用习惯的优化脚本">fcitx5_customizer —— 一个让 Fcitx5 更符合简中用户使用习惯的优化脚本</a><time datetime="2023-09-20T04:24:21.000Z" title="发表于 2023-09-20 12:24:21">2023-09-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/07/18/remote-system-monitor/" title="远程监视器——使用Flutter/Dart开发的Linux系统状态监视APP"><img src="/2023/07/18/remote-system-monitor/cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="远程监视器——使用Flutter/Dart开发的Linux系统状态监视APP"/></a><div class="content"><a class="title" href="/2023/07/18/remote-system-monitor/" title="远程监视器——使用Flutter/Dart开发的Linux系统状态监视APP">远程监视器——使用Flutter/Dart开发的Linux系统状态监视APP</a><time datetime="2023-07-18T01:36:03.000Z" title="发表于 2023-07-18 09:36:03">2023-07-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/06/20/conditional-compilation-using-source-gen-in-flutter-3/" title="在 flutter 中利用 source_gen 实现条件编译（下）"><img src="/2022/04/17/conditional-compilation-using-source-gen-in-flutter-1/cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="在 flutter 中利用 source_gen 实现条件编译（下）"/></a><div class="content"><a class="title" href="/2023/06/20/conditional-compilation-using-source-gen-in-flutter-3/" title="在 flutter 中利用 source_gen 实现条件编译（下）">在 flutter 中利用 source_gen 实现条件编译（下）</a><time datetime="2023-06-20T14:36:52.000Z" title="发表于 2023-06-20 22:36:52">2023-06-20</time></div></div></div></div></div></div></main><footer id="footer" style="background: linear-gradient(20deg, #0062be, #9855e1, #6f42c1, #541bba)"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By DebuggerX</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script src="/custom/custom.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>

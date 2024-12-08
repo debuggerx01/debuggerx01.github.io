@@ -1,0 +1,267 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>DebuggerX's Blog</title><meta name="author" content="DebuggerX"><meta name="copyright" content="DebuggerX"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta name="description"><link rel="shortcut icon" href="/images/favicon.png"><link rel="canonical" href="http://blog.debuggerx.com/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.1.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?45acc9824a216a8f1792b419eb91f090";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'DebuggerX\'s Blog',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2024-12-09 02:41:37'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="referrer" content="no-referrer-when-downgrade" /><link rel="stylesheet" href="/md_editor/css/editormd.min.css"><link rel="stylesheet" href="/custom/custom.css"><meta name="generator" content="Hexo 6.0.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/images/avatar.webp" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">38</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">31</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 文档</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/"><i class="fa-fw fas fa-book"></i><span> Hexo</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://butterfly.js.org/categories/Docs%E6%96%87%E6%AA%94/"><i class="fa-fw fas fa-paint-brush"></i><span> Butterfly</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-smile-o"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/videos/"><i class="fa-fw fas fa-play-circle"></i><span> 视频</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="//debuggerx.com/emulator_js"><i class="fa-fw fas fa-gamepad"></i><span> 游戏</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-tools"></i><span> 工具</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/md_editor/"><i class="fa-fw fas fa-pen"></i><span> MDEditor</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.debuggerx.com/dgm_web"><i class="fa-fw fas fa-hand-peace"></i><span> DDE手势管理器</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('/images/bg.webp')"><nav id="nav"><span id="blog-info"><a href="/" title="DebuggerX's Blog"><span class="site-name">DebuggerX's Blog</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 文档</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/"><i class="fa-fw fas fa-book"></i><span> Hexo</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://butterfly.js.org/categories/Docs%E6%96%87%E6%AA%94/"><i class="fa-fw fas fa-paint-brush"></i><span> Butterfly</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-smile-o"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/videos/"><i class="fa-fw fas fa-play-circle"></i><span> 视频</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="//debuggerx.com/emulator_js"><i class="fa-fw fas fa-gamepad"></i><span> 游戏</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-tools"></i><span> 工具</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/md_editor/"><i class="fa-fw fas fa-pen"></i><span> MDEditor</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.debuggerx.com/dgm_web"><i class="fa-fw fas fa-hand-peace"></i><span> DDE手势管理器</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">DebuggerX's Blog</h1><div id="site-subtitle"><span id="subtitle"></span></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/2024/12/08/weekly-todo-app/" title="每周TODO——个人向待办管理工具"><img class="post-bg" src="/2024/12/08/weekly-todo-app/cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="每周TODO——个人向待办管理工具"></a></div><div class="recent-post-info"><a class="article-title" href="/2024/12/08/weekly-todo-app/" title="每周TODO——个人向待办管理工具">每周TODO——个人向待办管理工具</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-12-08T06:43:10.000Z" title="发表于 2024-12-08 14:43:10">2024-12-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/">实用工具</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%BC%80%E6%BA%90/">开源</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/flutter/">flutter</a></span></div><div class="content">
+独立开发三件套 - 记账、日记、TodoList。没能免俗，我也做了个TODO工具😂
+
+why简单来说，是因为我真的不喜欢记待办（更不不喜欢记账和写日记正经人谁写日记啊）。以前试过用记事本📒、便签📝记录，也试过滴答清单、Worktile等专业工具，但总是用一段时间觉得不爽就没能坚持下去了。比如：越用越烦，每次打开前都要做好心理准备……我老婆还要更自律一些
+以及不知道有没有人懂这种心理——有时候不做计划的时候还能偶尔想起来做点自律的事情，但是一旦下定决心做了计划，反而产生了拖延情绪彻底躺平，还不如没做计划之前的表现🤣
+但是最近工作内容异常繁杂，临时需求频发，靠记忆属实不太现实。这次我先用了一周的飞书文档，又用了一周的飞书任务管理，果然还是不顺手，最终决定为自己做一个“恰到好处”的Todo工具。
+分析一下对我来说的“恰到好处”需要的
+因为现在工作一般是以周为单位开展，而且需要写周报，所以我的任务管理工具也应该以周为时间单位
+喜欢类似Jira面板那样拖拽的方式流转任务状态，拖动的时候总有种莫名的爽感（爱撕机膜人）
+新一周开始自动同步上周的未完成任务，即使是已完成的任务如果太多了看上 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2023/10/07/map-scancodes-to-keycodes/" title="Linux通用键位修改"><img class="post-bg" src="/2022/03/27/set-global-keybindings-via-xbindkeys/cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Linux通用键位修改"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/10/07/map-scancodes-to-keycodes/" title="Linux通用键位修改">Linux通用键位修改</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-10-07T09:18:05.000Z" title="发表于 2023-10-07 17:18:05">2023-10-07</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/">奇技淫巧</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/linux/">linux</a></span></div><div class="content">下面的修改主要是因为：
+
+现在习惯使用84配列的机械键盘，该配列下Insert键常被精简为需要和Fn键组合触发，这样使用IDE时某些快捷键不是很方便使用，反倒是PrtSc这个不常用的按键被保留了，所以把PrtSc键映射为Insert可以提高效率
+现在使用Fcitx5，虽然右侧Shift可以设置为输入法切换按键，但是无法将右Alt、Ctrl键设为热键；同时由于开始尝试双拼，v这个默认用于触发快速输入的按键在双拼模式下需要使用，所以把右Alt键映射为F16，这样即可实现用右Alt进入快速输入模式
+
+主要参考文章：
+
+Linux通用键位修改（中）-实际操作
+ArchLinux 键盘映射：交换 CapsLock 和 Ctrl
+
+修改操作：
+12345678910# 将PrtSc键映射为Insert# 将右Alt键映射为F16(XF86Launch7)sudo tee /etc/udev/hwdb.d/90-custom-keyboard.hwdb &amp;&gt;/dev/null &lt;&lt;EOFevdev:input:b0003*  KEYBOARD_KEY_70046=inser ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2023/09/20/fcitx5-customizer/" title="fcitx5_customizer —— 一个让 Fcitx5 更符合简中用户使用习惯的优化脚本"><img class="post-bg" src="/2023/09/20/fcitx5-customizer/cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="fcitx5_customizer —— 一个让 Fcitx5 更符合简中用户使用习惯的优化脚本"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/09/20/fcitx5-customizer/" title="fcitx5_customizer —— 一个让 Fcitx5 更符合简中用户使用习惯的优化脚本">fcitx5_customizer —— 一个让 Fcitx5 更符合简中用户使用习惯的优化脚本</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-09-20T04:24:21.000Z" title="发表于 2023-09-20 12:24:21">2023-09-20</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/">实用工具</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%BC%80%E6%BA%90/">开源</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/linux/">linux</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/shell/">shell</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/fcitx5/">fcitx5</a></span></div><div class="content">
+Fcitx (Flexible Input Method Framework) ──即小企鹅输入法，它是一个以 GPL 方式发布的输入法平台,是在 Linux 操作系统中常用的中文输入法。它的优点是，短小精悍、跟程序的兼容性比较好。而 Fcitx5 则是 Fcitx 的接替版本，其 slogen 是 maybe a new fcitx. 但是初始状态下的 Fcitx5 由于词库的缺失以及默认配置与很多人的习惯不同，所以需要进行一些修改和配置才能获得比较好的体验，于是我创建了一个专门用于优化 Fcitx5 的脚本——fcitx5_customizer
+
+使用方法1234567891011# 完全自定义bash fcitx5_customizer.sh# 使用推荐配置bash fcitx5_customizer.sh recommend# 在线运行bash -c "$(curl -fsSL https://www.debuggerx.com/fcitx5_customizer/fcitx5_customizer.sh)"# 在线运行并使用推荐配置curl -sSL https://www ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2023/07/18/remote-system-monitor/" title="远程监视器——使用Flutter/Dart开发的Linux系统状态监视APP"><img class="post-bg" src="/2023/07/18/remote-system-monitor/cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="远程监视器——使用Flutter/Dart开发的Linux系统状态监视APP"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/07/18/remote-system-monitor/" title="远程监视器——使用Flutter/Dart开发的Linux系统状态监视APP">远程监视器——使用Flutter/Dart开发的Linux系统状态监视APP</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-07-18T01:36:03.000Z" title="发表于 2023-07-18 09:36:03">2023-07-18</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/">实用工具</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/linux/">linux</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/flutter/">flutter</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/dart/">dart</a></span></div><div class="content">简介这是一个利用 Flutter/Dart 编写的，用于显示 Linux 系统状态信息的APP，可以运行在包括Android、iOS、Linux、MacOS、Windows等平台上，兼容从小屏手机到大屏幕电视等各种尺寸的展示，支持局域网自动发现服务，也支持通过网络远程使用。
+开发动机
+组了台洋垃圾E5主机，配的是一颗10核20线程的CPU，所以想做一个可以随时获得数框框快乐的工具
+钟爱的 deepin 系统升级v23版本后系统环境改动很大，原本使用的dock栏网速插件和悬浮窗插件失效了，所以打算做一个替代品
+除了日常使用 Linux 桌面，手里还有一些运行 Linux 系统的云服务器、虚拟机和机顶盒等设备，所以想要做一个无关发行版和桌面环境，通用的系统监视工具
+家里一堆淘汰的旧手机想要利用起来，并且用旧手机做系统状态监控可以在不占用一丁点的电脑屏幕空间情况下显示足够丰富的信息
+
+特性
+支持Android直接下载安装APP，iOS、Linux、MacOS、Windows等可以无修改直接支持
+多CPU架构支持（X64、ARM64）
+适配各种屏幕尺寸的显示、支持横竖屏切换
+适配多核心的自适应 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2023/06/20/conditional-compilation-using-source-gen-in-flutter-3/" title="在 flutter 中利用 source_gen 实现条件编译（下）"><img class="post-bg" src="/2022/04/17/conditional-compilation-using-source-gen-in-flutter-1/cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="在 flutter 中利用 source_gen 实现条件编译（下）"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/06/20/conditional-compilation-using-source-gen-in-flutter-3/" title="在 flutter 中利用 source_gen 实现条件编译（下）">在 flutter 中利用 source_gen 实现条件编译（下）</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-06-20T14:36:52.000Z" title="发表于 2023-06-20 22:36:52">2023-06-20</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/">奇技淫巧</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%BC%80%E6%BA%90/">开源</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E7%BC%96%E7%A8%8B/">编程</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/flutter/">flutter</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/dart/">dart</a></span></div><div class="content">
+在前篇  在 flutter 中利用 source_gen 实现条件编译（中） 中，我们利用 source_gen 实现了一套基础的条件编译流程。
+
+但是目前这套方案还有几个实用性问题：
+
+条件的表达力太弱，缺乏平台类型的组合和取反操作，一旦需要处理的平台类型超过两个就会很难处理 1234567891011/// 例如，如果有三个平台类型[android、ios、desktop]，那么代码需要写成下面的样子：@PlatformSpec(platformType: PlatformType.desktop)String platform = 'Desktop';@PlatformSpec(platformType: PlatformType.android)String platform = 'Mobile';/// 即使 ios 和 android 的代码完全相同，也必须再写一遍@PlatformSpec(platformType: PlatformType.ios)String platform = 'Mobile';
+
+生成的代码存在格式丢失情况，尤其是尾随逗号(trailing ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2022/06/19/conditional-compilation-using-source-gen-in-flutter-2/" title="在 flutter 中利用 source_gen 实现条件编译（中）"><img class="post-bg" src="/2022/04/17/conditional-compilation-using-source-gen-in-flutter-1/cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="在 flutter 中利用 source_gen 实现条件编译（中）"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/06/19/conditional-compilation-using-source-gen-in-flutter-2/" title="在 flutter 中利用 source_gen 实现条件编译（中）">在 flutter 中利用 source_gen 实现条件编译（中）</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-06-18T20:08:28.000Z" title="发表于 2022-06-19 04:08:28">2022-06-19</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/">奇技淫巧</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%BC%80%E6%BA%90/">开源</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E7%BC%96%E7%A8%8B/">编程</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/flutter/">flutter</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/dart/">dart</a></span></div><div class="content">
+在前篇 在 flutter 中利用 source_gen 实现条件编译（上） 中，主要介绍了在 Flutter 跨平台开发过程中“条件编译”特性的需求及现状。本篇将介绍一种利用 Flutter/Dart 官方的代码生成库 —— source_gen 实现条件编译的方法。
+
+从 json_serializable 认识 source_gen
+如果是按部就班地学习 flutter，那么应该是在 JSON 和序列化数据 这篇教程里第一次认识 flutter/dart 的 source_gen(代码生成) 技术。
+
+json_serializable 做了什么在网络应用开发中，经常需要做 JSON 对象的序列化和反序列化。如果直接使用 dart:convert 包将json字符串反序列化，得到的将是一个通用的Map/List结构，然后开发时通过输入字段名字符串的方式从中取值，非常的不方便，所以在前后端已经定义好数据格式时，通过预定义实体类，json解析后将字段值映射到这个实体类的属性上，就可以在开发时获得类型提醒和约束，从而极大提高开发效率，并降低出错的概率。而json_serializab ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2022/05/03/make-a-ci-workflow-with-gitea-and-drone/" title="基于Gitea+Drone的CI系统"><img class="post-bg" src="/2022/05/03/make-a-ci-workflow-with-gitea-and-drone/cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="基于Gitea+Drone的CI系统"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/05/03/make-a-ci-workflow-with-gitea-and-drone/" title="基于Gitea+Drone的CI系统">基于Gitea+Drone的CI系统</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-05-03T14:28:52.000Z" title="发表于 2022-05-03 22:28:52">2022-05-03</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/">实用工具</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E8%BF%90%E7%BB%B4/">运维</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/">自动化</a></span></div><div class="content">关于CI系统(Continuous Integration)，我已经有过了一些学习和实践了：
+GitLab CI/CD (一) ：自动打包部署Flutter项目 | DebuggerX’s BlogGitLab CI/CD (二) ：自动编译部署Web项目 | DebuggerX’s Blog利用 GitHub Actions 自动构建 Linux 内核为 deb 包 | DebuggerX’s Blog
+那么为什么还要再折腾这样一套CI方案呢？
+
+GitLab的CI/CD：很好，很强大，功能非常完善，非常建议中小团队作为自建代码管理部署平台使用，唯一的问题就是太重了，需要一台性能配置颇高(至少使用2 vCPU和4 GiB内存)的独立服务器
+GitHub Actions：也很好，使用非常方便，非常建议个人项目使用，但是同样缺陷明显，虽然可以部署私有runner，但是由于GitHub本身无法self-hosted，所以使用体验很受网络质量影响，并且由于各种安全限制，私有仓库使用体验不是那么的方便
+
+所以基于如上原因，我是在家里一台24小时运行的小服务器上部署了一个 Gitea 服务，并将 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2022/04/17/conditional-compilation-using-source-gen-in-flutter-1/" title="在 flutter 中利用 source_gen 实现条件编译（上）"><img class="post-bg" src="/2022/04/17/conditional-compilation-using-source-gen-in-flutter-1/cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="在 flutter 中利用 source_gen 实现条件编译（上）"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/04/17/conditional-compilation-using-source-gen-in-flutter-1/" title="在 flutter 中利用 source_gen 实现条件编译（上）">在 flutter 中利用 source_gen 实现条件编译（上）</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-04-16T19:35:20.000Z" title="发表于 2022-04-17 03:35:20">2022-04-17</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/">奇技淫巧</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%BC%80%E6%BA%90/">开源</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E7%BC%96%E7%A8%8B/">编程</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/flutter/">flutter</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/dart/">dart</a></span></div><div class="content">
+随着 Flutter 3 正式发布，Flutter 的跨平台之旅迈入高潮。现在，Flutter 3 增加了对 macOS 和 Linux 应用的稳定支持，这意味着我们可以仅用一套代码库，为 6 个平台构建精美的体验。
+
+一套代码跨平台的问题迄今为止，我已经使用 flutter 开发了数个跨平台项目，有的是相对常见的 Android / iOS 双平台项目，也有横跨桌面端、移动端和 Web 端这种平台差异更大的项目。由于 flutter 项目是使用同一套代码来编写所有目标平台的界面和逻辑，所以时常会出现以下情况：
+不同平台下需要运行不同的代码逻辑例如，在 Android 平台上，应用左上角默认的返回键图标是【】，而在 iOS 平台上，默认的返回键图标样式是【】（参看：平台行为差异和适配 - 图标），为了能够使应用在不同平台上可以表现得更加符合平台的风格和习惯，往往需要判断运行平台编写分支代码
+一般做法针对上面的例子，参看 flutter sdk 中 BackButton 的源码 back_button.dart#L31：
+1234567891011121314151617181920c ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2022/03/30/some-personal-preferences-for-linux/" title="个人对 Linux 的一些偏好设置"><img class="post-bg" src="/2022/03/30/some-personal-preferences-for-linux/cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="个人对 Linux 的一些偏好设置"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/03/30/some-personal-preferences-for-linux/" title="个人对 Linux 的一些偏好设置">个人对 Linux 的一些偏好设置</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-03-29T21:20:17.000Z" title="发表于 2022-03-30 05:20:17">2022-03-30</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/">奇技淫巧</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/linux/">linux</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/Chrome/">Chrome</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/vim/">vim</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/shell/">shell</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/Easystroke/">Easystroke</a></span></div><div class="content">
+上一篇 利用 Xbindkeys 设置全局快捷键/一键切换输入法 中介绍了我关于系统快捷键的一点定制，这篇将继续介绍我个人对 Linux 的一些偏好设置，有些是为了提高效率方便使用，有些则是为了美观。
+
+
+    window.onload = function () {
+        document.querySelectorAll('.hide_code').forEach(function (div) {
+            var is = div.querySelectorAll('i');
+            is[0].click();
+        });
+    }
+
+
+Bash.bashrc12345678910111213141516171819# History settings.# 配置显示 history 时显示时间HISTTIMEFORMAT="[%F-%T] "# 增加记录历史的最大条数HISTSIZE=10000HISTFILESIZE=20000# Alias definitions.# 将别名配置分离到独立文件中方便管理if [ - ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2022/03/27/set-global-keybindings-via-xbindkeys/" title="利用 Xbindkeys 设置全局快捷键/一键切换输入法"><img class="post-bg" src="/2022/03/27/set-global-keybindings-via-xbindkeys/cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="利用 Xbindkeys 设置全局快捷键/一键切换输入法"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/03/27/set-global-keybindings-via-xbindkeys/" title="利用 Xbindkeys 设置全局快捷键/一键切换输入法">利用 Xbindkeys 设置全局快捷键/一键切换输入法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-03-26T16:54:48.000Z" title="发表于 2022-03-27 00:54:48">2022-03-27</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/">奇技淫巧</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/linux/">linux</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/xbindkeys/">xbindkeys</a></span></div><div class="content">
+就像在 DDE手势管理器：FAQ 中提到的，我对与电脑的交互方式一直有比较高的要求，毕竟工作加上生活娱乐，有太多太多的时间要花在电脑上了，符合个人习惯的操作方式可以极大地提高效率并缓解疲劳。除了触摸板手势和鼠标手势之外，我还有一些习惯的个人向系统快捷键设置，其中很重要使用频率极高的快捷键就是：通过单击键盘右侧的 Shift 按键切换输入法。
+
+Why切换中英文输入法是一个使用频率极高的操作，尤其是在写代码和文档的时候。一般来说，默认的切换方式有两种：
+
+使用 Ctrl + Shift 组合键，这是最符合一般习惯的。但是由于需要使用左手的小拇指和无名指以略微扭曲的姿势去按，所以长时间频繁使用会比较容易造成疲劳，而且需要按两个键的组合键，相比于按下一个键总归要多花一点点时间，这在高速打字或者需要尽快跟随思路编写代码的时候，这一点点的差别就可能会让人感觉到不爽。
+使用中文输入法自带的方式切换中英文模式，比如搜狗输入法中可以选择切换中英文模式的快捷键： 但是搜狗输入法给出的选项是同时对左右两侧的 Ctrl / Shift 键生效的，而我只希望右侧的 Shift 键响应中英文的切换，因为正常来 ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/#content-inner">4</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/images/avatar.webp" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">DebuggerX</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">38</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">31</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/debuggerx01"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/12/08/weekly-todo-app/" title="每周TODO——个人向待办管理工具"><img src="/2024/12/08/weekly-todo-app/cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="每周TODO——个人向待办管理工具"/></a><div class="content"><a class="title" href="/2024/12/08/weekly-todo-app/" title="每周TODO——个人向待办管理工具">每周TODO——个人向待办管理工具</a><time datetime="2024-12-08T06:43:10.000Z" title="发表于 2024-12-08 14:43:10">2024-12-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/10/07/map-scancodes-to-keycodes/" title="Linux通用键位修改"><img src="/2022/03/27/set-global-keybindings-via-xbindkeys/cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Linux通用键位修改"/></a><div class="content"><a class="title" href="/2023/10/07/map-scancodes-to-keycodes/" title="Linux通用键位修改">Linux通用键位修改</a><time datetime="2023-10-07T09:18:05.000Z" title="发表于 2023-10-07 17:18:05">2023-10-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/09/20/fcitx5-customizer/" title="fcitx5_customizer —— 一个让 Fcitx5 更符合简中用户使用习惯的优化脚本"><img src="/2023/09/20/fcitx5-customizer/cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="fcitx5_customizer —— 一个让 Fcitx5 更符合简中用户使用习惯的优化脚本"/></a><div class="content"><a class="title" href="/2023/09/20/fcitx5-customizer/" title="fcitx5_customizer —— 一个让 Fcitx5 更符合简中用户使用习惯的优化脚本">fcitx5_customizer —— 一个让 Fcitx5 更符合简中用户使用习惯的优化脚本</a><time datetime="2023-09-20T04:24:21.000Z" title="发表于 2023-09-20 12:24:21">2023-09-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/07/18/remote-system-monitor/" title="远程监视器——使用Flutter/Dart开发的Linux系统状态监视APP"><img src="/2023/07/18/remote-system-monitor/cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="远程监视器——使用Flutter/Dart开发的Linux系统状态监视APP"/></a><div class="content"><a class="title" href="/2023/07/18/remote-system-monitor/" title="远程监视器——使用Flutter/Dart开发的Linux系统状态监视APP">远程监视器——使用Flutter/Dart开发的Linux系统状态监视APP</a><time datetime="2023-07-18T01:36:03.000Z" title="发表于 2023-07-18 09:36:03">2023-07-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/06/20/conditional-compilation-using-source-gen-in-flutter-3/" title="在 flutter 中利用 source_gen 实现条件编译（下）"><img src="/2022/04/17/conditional-compilation-using-source-gen-in-flutter-1/cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="在 flutter 中利用 source_gen 实现条件编译（下）"/></a><div class="content"><a class="title" href="/2023/06/20/conditional-compilation-using-source-gen-in-flutter-3/" title="在 flutter 中利用 source_gen 实现条件编译（下）">在 flutter 中利用 source_gen 实现条件编译（下）</a><time datetime="2023-06-20T14:36:52.000Z" title="发表于 2023-06-20 22:36:52">2023-06-20</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/"><span class="card-category-list-name">奇技淫巧</span><span class="card-category-list-count">14</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/"><span class="card-category-list-name">实用工具</span><span class="card-category-list-count">15</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E4%B9%8B%E5%A4%96/"><span class="card-category-list-name">技术之外</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%A0%81%E6%B5%B7%E6%97%A0%E6%B6%AF/"><span class="card-category-list-name">码海无涯</span><span class="card-category-list-count">5</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/nginx/" style="font-size: 1.15em; color: rgb(146, 64, 112)">nginx</a><a href="/tags/%E8%BF%90%E7%BB%B4/" style="font-size: 1.25em; color: rgb(100, 180, 120)">运维</a><a href="/tags/%E5%85%A8%E6%A0%88/" style="font-size: 1.15em; color: rgb(2, 142, 114)">全栈</a><a href="/tags/markdown/" style="font-size: 1.15em; color: rgb(39, 38, 132)">markdown</a><a href="/tags/hexo/" style="font-size: 1.15em; color: rgb(32, 168, 87)">hexo</a><a href="/tags/%E5%BC%80%E6%BA%90/" style="font-size: 1.45em; color: rgb(110, 184, 29)">开源</a><a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 1.35em; color: rgb(89, 57, 160)">前端</a><a href="/tags/python/" style="font-size: 1.15em; color: rgb(20, 123, 139)">python</a><a href="/tags/termux/" style="font-size: 1.15em; color: rgb(55, 50, 131)">termux</a><a href="/tags/web/" style="font-size: 1.18em; color: rgb(188, 16, 190)">web</a><a href="/tags/%E5%AE%89%E5%88%A9%E5%90%91/" style="font-size: 1.22em; color: rgb(197, 75, 171)">安利向</a><a href="/tags/%E7%BC%96%E7%A8%8B/" style="font-size: 1.25em; color: rgb(146, 156, 139)">编程</a><a href="/tags/kvm/" style="font-size: 1.15em; color: rgb(111, 196, 76)">kvm</a><a href="/tags/linux/" style="font-size: 1.38em; color: rgb(71, 21, 122)">linux</a><a href="/tags/css/" style="font-size: 1.22em; color: rgb(29, 72, 9)">css</a><a href="/tags/bug/" style="font-size: 1.22em; color: rgb(37, 1, 6)">bug</a><a href="/tags/flutter/" style="font-size: 1.42em; color: rgb(151, 143, 184)">flutter</a><a href="/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/" style="font-size: 1.32em; color: rgb(32, 180, 52)">自动化</a><a href="/tags/QRS%E6%B3%A2%E6%A3%80%E6%B5%8B%E7%AE%97%E6%B3%95/" style="font-size: 1.15em; color: rgb(95, 5, 167)">QRS波检测算法</a><a href="/tags/dart/" style="font-size: 1.28em; color: rgb(57, 117, 94)">dart</a><a href="/tags/%E6%8A%98%E8%85%BE/" style="font-size: 1.18em; color: rgb(105, 111, 42)">折腾</a><a href="/tags/Chrome/" style="font-size: 1.18em; color: rgb(49, 106, 176)">Chrome</a><a href="/tags/%E6%8F%92%E4%BB%B6/" style="font-size: 1.15em; color: rgb(74, 148, 25)">插件</a><a href="/tags/GitHub/" style="font-size: 1.15em; color: rgb(111, 62, 47)">GitHub</a><a href="/tags/deepin/" style="font-size: 1.18em; color: rgb(52, 6, 105)">deepin</a><a href="/tags/xbindkeys/" style="font-size: 1.15em; color: rgb(79, 91, 159)">xbindkeys</a><a href="/tags/docker/" style="font-size: 1.15em; color: rgb(74, 108, 110)">docker</a><a href="/tags/vim/" style="font-size: 1.15em; color: rgb(87, 139, 151)">vim</a><a href="/tags/shell/" style="font-size: 1.18em; color: rgb(61, 7, 46)">shell</a><a href="/tags/Easystroke/" style="font-size: 1.15em; color: rgb(6, 38, 52)">Easystroke</a><a href="/tags/fcitx5/" style="font-size: 1.15em; color: rgb(105, 124, 91)">fcitx5</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
+    <i class="fas fa-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/12/"><span class="card-archive-list-date">十二月 2024</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/10/"><span class="card-archive-list-date">十月 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/09/"><span class="card-archive-list-date">九月 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/07/"><span class="card-archive-list-date">七月 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/06/"><span class="card-archive-list-date">六月 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/06/"><span class="card-archive-list-date">六月 2022</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/05/"><span class="card-archive-list-date">五月 2022</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/04/"><span class="card-archive-list-date">四月 2022</span><span class="card-archive-list-count">1</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">38</div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">78.1k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2024-12-08T18:41:35.890Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer" style="background: linear-gradient(20deg, #0062be, #9855e1, #6f42c1, #541bba)"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By DebuggerX</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>window.typedJSFn = {
+  init: (str) => {
+    window.typed = new Typed('#subtitle', Object.assign({
+      strings: str,
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50,
+    }, null))
+  },
+  run: (subtitleType) => {
+    if (true) {
+      if (typeof Typed === 'function') {
+        subtitleType()
+      } else {
+        getScript('https://cdn.staticfile.org/typed.js/2.0.12/typed.min.js').then(subtitleType)
+      }
+    } else {
+      subtitleType()
+    }
+  }
+}
+</script><script>function subtitleType () {
+  if (true) {
+    typedJSFn.init(["人类从历史中学到的唯一教训","就是人类无法从历史中学到任何教训"])
+  } else {
+    document.getElementById("subtitle").textContent = "人类从历史中学到的唯一教训"
+  }
+}
+typedJSFn.run(subtitleType)</script></div><script src="/custom/custom.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>

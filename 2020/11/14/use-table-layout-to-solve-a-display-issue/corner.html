@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <style>
+      body {
+        width: 100vw;
+        height: 100vh;
+        background: #1b1b1b;
+      }
+
+      #container {
+        position: relative;
+        margin: 50px;
+        padding: 35px;
+        width: 230px;
+        height: 50px;
+        background: darkslateblue;
+        border-radius: 15px;
+        font-weight: bold;
+      }
+
+      #corner {
+        position: absolute;
+        top: -.4rem;
+        right: -1rem;
+      }
+
+      #corner > span {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        right: .8rem;
+        width: 4em;
+        color: white;
+        font-weight: bold;
+        font-style: oblique;
+      }
+
+      #corner:before {
+        position: absolute;
+        width: 3em;
+        top: -0.2rem;
+        right: 0.5rem;
+        z-index: 1;
+        padding-right: 0.6rem;
+        font-weight: bold;
+        line-height: 0;
+        color: black;
+        height: 0;
+        border: 1rem solid green;
+        border-left-color: transparent;
+        content: "";
+        box-shadow: 0 0.3rem 0.3rem -0.3rem black;
+      }
+
+      #corner:after {
+        content: "";
+        position: absolute;
+        top: 1.7rem;
+        right: 0.5rem;
+        border: 0.25rem solid darkgreen;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+      }
+
+    </style>
+</head>
+<body>
+<div id="container">
+    <span>人类从历史中学到的唯一教训是</span>
+    <span>人类无法从历史中学到任何教训</span>
+    <div id="corner">
+        <span>黑格尔</span>
+    </div>
+</div>
+</body>
+</html>

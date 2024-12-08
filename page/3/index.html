@@ -1,0 +1,330 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>DebuggerX's Blog</title><meta name="author" content="DebuggerX"><meta name="copyright" content="DebuggerX"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta name="description"><link rel="shortcut icon" href="/images/favicon.png"><link rel="canonical" href="http://blog.debuggerx.com/page/3/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.1.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?45acc9824a216a8f1792b419eb91f090";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'DebuggerX\'s Blog',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2024-12-09 03:20:50'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="referrer" content="no-referrer-when-downgrade" /><link rel="stylesheet" href="/md_editor/css/editormd.min.css"><link rel="stylesheet" href="/custom/custom.css"><meta name="generator" content="Hexo 6.0.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/images/avatar.webp" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">38</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">31</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 文档</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/"><i class="fa-fw fas fa-book"></i><span> Hexo</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://butterfly.js.org/categories/Docs%E6%96%87%E6%AA%94/"><i class="fa-fw fas fa-paint-brush"></i><span> Butterfly</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-smile-o"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/videos/"><i class="fa-fw fas fa-play-circle"></i><span> 视频</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="//debuggerx.com/emulator_js"><i class="fa-fw fas fa-gamepad"></i><span> 游戏</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-tools"></i><span> 工具</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/md_editor/"><i class="fa-fw fas fa-pen"></i><span> MDEditor</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.debuggerx.com/dgm_web"><i class="fa-fw fas fa-hand-peace"></i><span> DDE手势管理器</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('/images/bg.webp')"><nav id="nav"><span id="blog-info"><a href="/" title="DebuggerX's Blog"><span class="site-name">DebuggerX's Blog</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 文档</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/"><i class="fa-fw fas fa-book"></i><span> Hexo</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://butterfly.js.org/categories/Docs%E6%96%87%E6%AA%94/"><i class="fa-fw fas fa-paint-brush"></i><span> Butterfly</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-smile-o"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/videos/"><i class="fa-fw fas fa-play-circle"></i><span> 视频</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="//debuggerx.com/emulator_js"><i class="fa-fw fas fa-gamepad"></i><span> 游戏</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-tools"></i><span> 工具</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/md_editor/"><i class="fa-fw fas fa-pen"></i><span> MDEditor</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.debuggerx.com/dgm_web"><i class="fa-fw fas fa-hand-peace"></i><span> DDE手势管理器</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">DebuggerX's Blog</h1><div id="site-subtitle"><span id="subtitle"></span></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/2021/02/18/qrs-detector-for-flutter-in-dart/" title="qrs_detector——Flutter应用中的心电心率识别"><img class="post-bg" src="/2021/02/18/qrs-detector-for-flutter-in-dart/cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="qrs_detector——Flutter应用中的心电心率识别"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/02/18/qrs-detector-for-flutter-in-dart/" title="qrs_detector——Flutter应用中的心电心率识别">qrs_detector——Flutter应用中的心电心率识别</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-02-18T10:19:39.000Z" title="发表于 2021-02-18 18:19:39">2021-02-18</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%A0%81%E6%B5%B7%E6%97%A0%E6%B6%AF/">码海无涯</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%BC%80%E6%BA%90/">开源</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/flutter/">flutter</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/QRS%E6%B3%A2%E6%A3%80%E6%B5%8B%E7%AE%97%E6%B3%95/">QRS波检测算法</a></span></div><div class="content">
+公司的纯 Flutter 应用近期要添加一个根据 BLE 心电设备采集到信息实时显示使用者心率的功能，简单研究后发现需要实现一个 QRS波检测算法，记录下研究和实现的过程。
+
+
+    window.onload = function () {
+        document.querySelectorAll('.hide_code').forEach(function (div) {
+            var is = div.querySelectorAll('i');
+            is[0].click();
+        });
+    }
+
+
+DEMO效果演示
+ 
+
+
+    var bili1 = document.querySelector('#bili1');
+    var container = document.querySelector('#article-container');
+    bili1.height = (container.clientWidth * 3 / 4) + 'px';
+
+
+
+前期调查
+由于 App 已经实现了 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2021/01/13/batch-convert-pictures-to-webp-format/" title="批量转换图片为webp格式"><img class="post-bg" src="/2021/01/13/batch-convert-pictures-to-webp-format/cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="批量转换图片为webp格式"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/01/13/batch-convert-pictures-to-webp-format/" title="批量转换图片为webp格式">批量转换图片为webp格式</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-01-13T15:19:53.000Z" title="发表于 2021-01-13 23:19:53">2021-01-13</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/">实用工具</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/linux/">linux</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/">自动化</a></span></div><div class="content">
+愈发感受 webp 格式的强大，在博客里大部分用例下使用 webp 可以使图片占用的空间降低一个数量级，所以目前所有的图片资源都要转成 webp 后使用，一个一个转换效率太低，于是写了个脚本，可以批量将本目录下的常见格式图片转换为 webp 格式。
+
+1234567891011121314#!/usr/bin/env bash# 创建备份文件夹mkdir "bak"# 利用ls和正则获取当前目录下的所有图片路径存入数组images=$(ls *.{png,jpg})for image in $imagesdo  # -q 90 指定转换质量，经试验这个值效果和压缩率都不错  cwebp $image -q 90 -o ${image%.*}.webp  mv $image ./bak/$imagedone
+
+更新（2023-07-04）
+下面的脚本可以实现当原始图片尺寸超出指定大小时，自动对其进行缩放
+
+1234567891011121314151617181920212223242526272829303132333435#!/usr/bin/env bash# 设置宽高的最大值M ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2021/01/10/make-deepin-terminal-quake-mode-faster/" title="不满新版深度终端的动画速度，动手修改编译一个版本"><img class="post-bg" src="/2021/01/10/make-deepin-terminal-quake-mode-faster/cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="不满新版深度终端的动画速度，动手修改编译一个版本"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/01/10/make-deepin-terminal-quake-mode-faster/" title="不满新版深度终端的动画速度，动手修改编译一个版本">不满新版深度终端的动画速度，动手修改编译一个版本</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-01-09T18:09:59.000Z" title="发表于 2021-01-10 02:09:59">2021-01-10</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%A0%81%E6%B5%B7%E6%97%A0%E6%B6%AF/">码海无涯</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%BC%80%E6%BA%90/">开源</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/linux/">linux</a></span></div><div class="content">
+作为 Deepin Linux 的老用户，一直重度依赖老王的深度终端，尤其钟爱其系统级别随时可以一个快捷键从屏幕顶端呼出下拉式终端的所谓雷神模式。最近更新了新版终端，给雷神模式的显示加入了一个长得离谱的动画，非常不爽：目前终端的雷神模式动画有点太慢了吧 ,找到源码对应位置之后决定自己编译一个自用
+
+ 
+
+
+    var bili1 = document.querySelector('#bili1');
+    var container = document.querySelector('#article-container');
+    bili1.height = (container.clientWidth * 5 / 8) + 'px';
+
+
+步骤(可选)安装虚拟机
+因为不想在日常使用的机器上安装过多无用的开发依赖包，所以使用最新deepin镜像安装了一个全新的虚拟机，具体方法可以参考我之前的这篇建议Linux用户尝试下kvm虚拟机
+
+下载源码新版本终端的源码位置在：linuxdeepin / deepin-terminal
+查看当前系统的终端版本：
+所以就 clone 这 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2021/01/03/retranslated-a-hundred-love-songs/" title="重译《百恋歌》"><img class="post-bg" src="/2021/01/03/retranslated-a-hundred-love-songs/cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="重译《百恋歌》"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/01/03/retranslated-a-hundred-love-songs/" title="重译《百恋歌》">重译《百恋歌》</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-01-02T19:38:59.000Z" title="发表于 2021-01-03 03:38:59">2021-01-03</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%8A%80%E6%9C%AF%E4%B9%8B%E5%A4%96/">技术之外</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%AE%89%E5%88%A9%E5%90%91/">安利向</a></span></div><div class="content">
+一首很喜欢的歌。但是不很满意所有现有的歌词翻译，这么多年了一直心存芥蒂。今次趁着想给博客撸一个歌词显示组件的功夫，终于决定试着自己翻一版 💩
+
+
+
+
+
+
+
+
+
+注：点击下面的开关按钮可以控制对应歌词面板的显示与隐藏
+
+    .lrc {
+        height: 5em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: repeating-linear-gradient(45deg, black, transparent 100px);
+        border-radius: .5em;
+    }
+    
+    .lrc_line {
+        display: block;
+        line-height: 1rem;
+    }
+    
+    .lrc_line:empty:before {
+        content: "\200b"; // unicode zero widt ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2020/12/31/manage-i18n-resources-gracefully/" title="优雅地管理国际化资源——i18n-manager"><img class="post-bg" src="/2020/12/31/manage-i18n-resources-gracefully/cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="优雅地管理国际化资源——i18n-manager"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/12/31/manage-i18n-resources-gracefully/" title="优雅地管理国际化资源——i18n-manager">优雅地管理国际化资源——i18n-manager</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-12-30T16:30:32.000Z" title="发表于 2020-12-31 00:30:32">2020-12-31</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/">实用工具</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%BC%80%E6%BA%90/">开源</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%89%8D%E7%AB%AF/">前端</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/">自动化</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/flutter/">flutter</a></span></div><div class="content">
+项目开发中国际化多语言的需求非常常见，最近这两年工作项目中都是人工手动管理翻译文件的方式，感觉非常麻烦且容易出错。做 Android 开发的时候，Android Studio 中有一个非常好用的 Translations Editor，那么有没有一个类似的通用工具呢？然后，我找到了 i18n-manager 这个项目
+
+使用方法 
+
+
+    var bili1 = document.querySelector('#bili1');
+    var container = document.querySelector('#article-container');
+    bili1.height = (container.clientWidth * 5 / 8) + 'px';
+
+
+下载下面是我加入了免费翻译 API 的版本：https://github.com/debuggerx01/i18n-manager/releases/tag/free_translateFeel free ~
+</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2020/12/29/these-years-about-flutter-and-me/" title="这些年，我与Flutter……"><img class="post-bg" src="/2020/12/29/these-years-about-flutter-and-me/cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="这些年，我与Flutter……"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/12/29/these-years-about-flutter-and-me/" title="这些年，我与Flutter……">这些年，我与Flutter……</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-12-28T16:08:04.000Z" title="发表于 2020-12-29 00:08:04">2020-12-29</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%A0%81%E6%B5%B7%E6%97%A0%E6%B6%AF/">码海无涯</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%89%8D%E7%AB%AF/">前端</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/flutter/">flutter</a></span></div><div class="content">2017年12月
+为公司规划中的新项目调研跨平台方案可行性，在尝试了包括React Native、 ionic、 Cordova、 Cordova、 Weex 等在内几乎当时所有流行的方案之后，竟没有一个能够让人满意的。直到发现了当时还在 alpha 版的 Flutter，被其优秀的开发体验、精妙的架构设计和惊艳的流畅度表现所折服，于是开始正式研究该框架。
+
+2018年1月
+加入了当时(直至今日仍是)人数最多的 Flutter 技术交流群（Flutter 中文用户组 qq:482462550）。
+发现当时没有用于将 json 解析生成数据类模板代码的工具，于是在GsonFormat的启发下，用3天时间撸出了JSONFormat4Flutter的第一版，并分享在交流群内供群友使用，获得了最初的好评。
+该工具也成为了目前我 GitHub 上 Star 数最多的项目，虽然在易用性上我确实花了一些心思，但是就代码质量而言这就是一坨💩，能够获得这么多的关注更多的是因为当时没有更好的选择，俗话说“来的早不如来的巧”，这个工具就是出现的时机又早又巧，占了大便宜😂
+
+
+
+2月
+开始尝试编写公司项目 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2020/12/26/modern-development-workflow-gitlab-ci-cd-2/" title="GitLab CI/CD (二) ：自动编译部署Web项目"><img class="post-bg" src="/2020/12/13/modern-development-workflow-gitlab-ci-cd-1/cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="GitLab CI/CD (二) ：自动编译部署Web项目"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/12/26/modern-development-workflow-gitlab-ci-cd-2/" title="GitLab CI/CD (二) ：自动编译部署Web项目">GitLab CI/CD (二) ：自动编译部署Web项目</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-12-26T09:29:58.000Z" title="发表于 2020-12-26 17:29:58">2020-12-26</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/">实用工具</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E8%BF%90%E7%BB%B4/">运维</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/">自动化</a></span></div><div class="content">
+书接上文《GitLab CI/CD (一) ：自动打包部署Flutter项目》，这次继续记录用 GitLab CI/CD 自动部署项目中 H5 部分到测试环境的方法。
+
+项目说明这个 H5 的项目主要是作为上篇中 Flutter 项目的补充存在的，因为 APP 中有些页面有复杂图表、动态更新，后续还有可能需要能够方便地分享到主流社交平台进行引流的需求，所以这部分选择用 Web 的方式实现。具体技术选型是 Next.js + TypeScript + Material-UI，通过 Next.js 自带的 Node.js 服务服务器部署，并使用 pm2 做进程管理。
+注册 Runner安装方法参考上篇，这次以 shell 作为执行器注册 Runner，如下图：配置方法很简单，只要在输入 executor 时输入 shell 即可，其他选项也都和上篇中的一样。
+编写 CI 配置文件配置如下：
+12345678910111213141516stages:  - deploydeploy_project:  stage: deploy  variables:    GIT_STRATEGY:  ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2020/12/20/Academia-The-cruel-truth-of-cybernetic-revolution/" title="学院派Academia：赛博已来——控制论革命的残酷真相"><img class="post-bg" src="/2020/12/20/Academia-The-cruel-truth-of-cybernetic-revolution/cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="学院派Academia：赛博已来——控制论革命的残酷真相"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/12/20/Academia-The-cruel-truth-of-cybernetic-revolution/" title="学院派Academia：赛博已来——控制论革命的残酷真相">学院派Academia：赛博已来——控制论革命的残酷真相</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-12-19T22:28:44.000Z" title="发表于 2020-12-20 06:28:44">2020-12-20</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%8A%80%E6%9C%AF%E4%B9%8B%E5%A4%96/">技术之外</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%AE%89%E5%88%A9%E5%90%91/">安利向</a></span></div><div class="content">
+针对赛博朋克文化的讨论，大量的解析内容仍然停留在赛博朋克所呈现的五光十色的文化符号和美学表征之上，或仅是浅尝辄止地将赛博朋克视为某种纯粹的“未来幻想”或者“文学体裁”，而无意识地削弱了这个题材的历史性和现实性。这种去深度的、空虚的文化拟像矩阵轰炸，在泛商品化的消费社会，已经模糊了批判文学的焦点，哪怕《赛博朋克2077》这样的作品已经及其有意识地将赛博朋克世界表述为一个不值得向往的反乌托邦，玩家仍然将这个世界看作一个类迪士尼的游乐场，而其中尖锐的深刻性也被暗暗消解了
+
+
+
+ 
+
+
+    var bili1 = document.querySelector('#bili1');
+    var container = document.querySelector('#article-container');
+    bili1.height = (container.clientWidth * 3 / 4) + 'px';
+
+
+观看指南为节省您的时间，以及获得更佳的观看体验，建议先阅读以下内容——下面视频主题一节的内容来自视频的开头，如果阅读后对其所述内容感有兴趣，并能接受其学术化的表 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2020/12/13/modern-development-workflow-gitlab-ci-cd-1/" title="GitLab CI/CD (一) ：自动打包部署Flutter项目"><img class="post-bg" src="/2020/12/13/modern-development-workflow-gitlab-ci-cd-1/cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="GitLab CI/CD (一) ：自动打包部署Flutter项目"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/12/13/modern-development-workflow-gitlab-ci-cd-1/" title="GitLab CI/CD (一) ：自动打包部署Flutter项目">GitLab CI/CD (一) ：自动打包部署Flutter项目</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-12-13T00:41:46.000Z" title="发表于 2020-12-13 08:41:46">2020-12-13</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/">实用工具</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E8%BF%90%E7%BB%B4/">运维</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/">自动化</a></span></div><div class="content">
+在做的项目最近终于接近了第一个里程碑 ，挤了些时间把一直没做的 CI/CD 利用现有的资源和 GitLab 实现了，记录下大概的过程。
+
+CI/CD 是什么，为什么需要 CI/CD什么是 CI/CD ？持续集成与持续交付上面这篇文章已经总结得不错了，我这边主要也是利用 CI/CD 确保每次 push 的代码都是完整可编译的，从而减少错误的发生，同时自动部署，免去手动发布 APP 测试版本和登陆测服人工部署网站更新的麻烦，提高工作效率。
+
+相比于原始的编写自动化脚本（shell/python等），yaml 格式的 CI/CD 配置方式简化了流程，提供了很多便捷的功能。但是相对应的，需要查阅相关配置文档，而且需要更强的 shell 命令编写能力
+
+Flutter 项目（目前仅限 Android 端）安装 GitLab Runner如上图，进入项目的 GitLab 主页，导航至[设置]-[CI/CD]-展开[Runner]选项卡，可以看到简易教程.
+
+这里我他妈被误导了😤，看到那个大大蓝底的“在 Kubernetes 上安装 Runner”按钮，以为是 Runner 必须安装在 K8s上 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2020/12/01/one-line-layouts-by-una/" title="《现代CSS布局 —— Grid》 by Una from Google"><img class="post-bg" src="/2020/12/01/one-line-layouts-by-una/cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="《现代CSS布局 —— Grid》 by Una from Google"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/12/01/one-line-layouts-by-una/" title="《现代CSS布局 —— Grid》 by Una from Google">《现代CSS布局 —— Grid》 by Una from Google</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-12-01T15:57:42.000Z" title="发表于 2020-12-01 23:57:42">2020-12-01</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/">奇技淫巧</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%89%8D%E7%AB%AF/">前端</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/css/">css</a></span></div><div class="content">
+CSS 布局发生了很大的变化。 现在，具有适用于所有现代浏览器的 CSS Grid 交互操作性工具，让开发能力变得更强大。 本次将由来自 Google 的 Una 分享一些 CSS Grid 建议和技巧，将复杂的布局仅需几行代码即可完成。
+
+
+
+
+
+
+function reLayout() {
+    document.querySelector('html').dataset.theme = "light";
+    var iframe = document.querySelector('#iframe');
+    var bili = document.querySelector('#bili');
+    var container = document.querySelector('#article-container');
+    bili.height = (container.clientWidth * 3 / 4) + 'px';
+    if (window.innerWidth < 600) {
+        iframe.height = '10200px ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/2/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/#content-inner">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/#content-inner">4</a><a class="extend next" rel="next" href="/page/4/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/images/avatar.webp" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">DebuggerX</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">38</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">31</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/debuggerx01"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/12/08/weekly-todo-app/" title="每周TODO——个人向待办管理工具"><img src="/2024/12/08/weekly-todo-app/cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="每周TODO——个人向待办管理工具"/></a><div class="content"><a class="title" href="/2024/12/08/weekly-todo-app/" title="每周TODO——个人向待办管理工具">每周TODO——个人向待办管理工具</a><time datetime="2024-12-08T06:43:10.000Z" title="发表于 2024-12-08 14:43:10">2024-12-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/10/07/map-scancodes-to-keycodes/" title="Linux通用键位修改"><img src="/2022/03/27/set-global-keybindings-via-xbindkeys/cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Linux通用键位修改"/></a><div class="content"><a class="title" href="/2023/10/07/map-scancodes-to-keycodes/" title="Linux通用键位修改">Linux通用键位修改</a><time datetime="2023-10-07T09:18:05.000Z" title="发表于 2023-10-07 17:18:05">2023-10-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/09/20/fcitx5-customizer/" title="fcitx5_customizer —— 一个让 Fcitx5 更符合简中用户使用习惯的优化脚本"><img src="/2023/09/20/fcitx5-customizer/cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="fcitx5_customizer —— 一个让 Fcitx5 更符合简中用户使用习惯的优化脚本"/></a><div class="content"><a class="title" href="/2023/09/20/fcitx5-customizer/" title="fcitx5_customizer —— 一个让 Fcitx5 更符合简中用户使用习惯的优化脚本">fcitx5_customizer —— 一个让 Fcitx5 更符合简中用户使用习惯的优化脚本</a><time datetime="2023-09-20T04:24:21.000Z" title="发表于 2023-09-20 12:24:21">2023-09-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/07/18/remote-system-monitor/" title="远程监视器——使用Flutter/Dart开发的Linux系统状态监视APP"><img src="/2023/07/18/remote-system-monitor/cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="远程监视器——使用Flutter/Dart开发的Linux系统状态监视APP"/></a><div class="content"><a class="title" href="/2023/07/18/remote-system-monitor/" title="远程监视器——使用Flutter/Dart开发的Linux系统状态监视APP">远程监视器——使用Flutter/Dart开发的Linux系统状态监视APP</a><time datetime="2023-07-18T01:36:03.000Z" title="发表于 2023-07-18 09:36:03">2023-07-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/06/20/conditional-compilation-using-source-gen-in-flutter-3/" title="在 flutter 中利用 source_gen 实现条件编译（下）"><img src="/2022/04/17/conditional-compilation-using-source-gen-in-flutter-1/cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="在 flutter 中利用 source_gen 实现条件编译（下）"/></a><div class="content"><a class="title" href="/2023/06/20/conditional-compilation-using-source-gen-in-flutter-3/" title="在 flutter 中利用 source_gen 实现条件编译（下）">在 flutter 中利用 source_gen 实现条件编译（下）</a><time datetime="2023-06-20T14:36:52.000Z" title="发表于 2023-06-20 22:36:52">2023-06-20</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/"><span class="card-category-list-name">奇技淫巧</span><span class="card-category-list-count">14</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/"><span class="card-category-list-name">实用工具</span><span class="card-category-list-count">15</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E4%B9%8B%E5%A4%96/"><span class="card-category-list-name">技术之外</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%A0%81%E6%B5%B7%E6%97%A0%E6%B6%AF/"><span class="card-category-list-name">码海无涯</span><span class="card-category-list-count">5</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/nginx/" style="font-size: 1.15em; color: rgb(193, 32, 132)">nginx</a><a href="/tags/%E8%BF%90%E7%BB%B4/" style="font-size: 1.25em; color: rgb(40, 100, 91)">运维</a><a href="/tags/%E5%85%A8%E6%A0%88/" style="font-size: 1.15em; color: rgb(19, 4, 38)">全栈</a><a href="/tags/markdown/" style="font-size: 1.15em; color: rgb(192, 89, 99)">markdown</a><a href="/tags/hexo/" style="font-size: 1.15em; color: rgb(136, 85, 171)">hexo</a><a href="/tags/%E5%BC%80%E6%BA%90/" style="font-size: 1.45em; color: rgb(187, 75, 17)">开源</a><a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 1.35em; color: rgb(2, 121, 78)">前端</a><a href="/tags/python/" style="font-size: 1.15em; color: rgb(63, 17, 51)">python</a><a href="/tags/termux/" style="font-size: 1.15em; color: rgb(29, 167, 180)">termux</a><a href="/tags/web/" style="font-size: 1.18em; color: rgb(58, 68, 195)">web</a><a href="/tags/%E5%AE%89%E5%88%A9%E5%90%91/" style="font-size: 1.22em; color: rgb(156, 21, 173)">安利向</a><a href="/tags/%E7%BC%96%E7%A8%8B/" style="font-size: 1.25em; color: rgb(169, 130, 200)">编程</a><a href="/tags/kvm/" style="font-size: 1.15em; color: rgb(109, 115, 4)">kvm</a><a href="/tags/linux/" style="font-size: 1.38em; color: rgb(16, 65, 1)">linux</a><a href="/tags/css/" style="font-size: 1.22em; color: rgb(120, 151, 88)">css</a><a href="/tags/bug/" style="font-size: 1.22em; color: rgb(15, 167, 81)">bug</a><a href="/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/" style="font-size: 1.32em; color: rgb(94, 32, 124)">自动化</a><a href="/tags/flutter/" style="font-size: 1.42em; color: rgb(44, 186, 23)">flutter</a><a href="/tags/QRS%E6%B3%A2%E6%A3%80%E6%B5%8B%E7%AE%97%E6%B3%95/" style="font-size: 1.15em; color: rgb(8, 2, 77)">QRS波检测算法</a><a href="/tags/dart/" style="font-size: 1.28em; color: rgb(133, 4, 87)">dart</a><a href="/tags/%E6%8A%98%E8%85%BE/" style="font-size: 1.18em; color: rgb(88, 157, 147)">折腾</a><a href="/tags/Chrome/" style="font-size: 1.18em; color: rgb(117, 175, 193)">Chrome</a><a href="/tags/%E6%8F%92%E4%BB%B6/" style="font-size: 1.15em; color: rgb(198, 154, 11)">插件</a><a href="/tags/GitHub/" style="font-size: 1.15em; color: rgb(65, 52, 85)">GitHub</a><a href="/tags/deepin/" style="font-size: 1.18em; color: rgb(164, 71, 53)">deepin</a><a href="/tags/docker/" style="font-size: 1.15em; color: rgb(82, 85, 144)">docker</a><a href="/tags/xbindkeys/" style="font-size: 1.15em; color: rgb(163, 195, 95)">xbindkeys</a><a href="/tags/vim/" style="font-size: 1.15em; color: rgb(188, 108, 162)">vim</a><a href="/tags/shell/" style="font-size: 1.18em; color: rgb(167, 77, 74)">shell</a><a href="/tags/Easystroke/" style="font-size: 1.15em; color: rgb(170, 161, 35)">Easystroke</a><a href="/tags/fcitx5/" style="font-size: 1.15em; color: rgb(135, 27, 175)">fcitx5</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
+    <i class="fas fa-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/12/"><span class="card-archive-list-date">十二月 2024</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/10/"><span class="card-archive-list-date">十月 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/09/"><span class="card-archive-list-date">九月 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/07/"><span class="card-archive-list-date">七月 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/06/"><span class="card-archive-list-date">六月 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/06/"><span class="card-archive-list-date">六月 2022</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/05/"><span class="card-archive-list-date">五月 2022</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/04/"><span class="card-archive-list-date">四月 2022</span><span class="card-archive-list-count">1</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">38</div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">78.1k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2024-12-08T19:20:50.537Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer" style="background: linear-gradient(20deg, #0062be, #9855e1, #6f42c1, #541bba)"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By DebuggerX</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>window.typedJSFn = {
+  init: (str) => {
+    window.typed = new Typed('#subtitle', Object.assign({
+      strings: str,
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50,
+    }, null))
+  },
+  run: (subtitleType) => {
+    if (true) {
+      if (typeof Typed === 'function') {
+        subtitleType()
+      } else {
+        getScript('https://cdn.staticfile.org/typed.js/2.0.12/typed.min.js').then(subtitleType)
+      }
+    } else {
+      subtitleType()
+    }
+  }
+}
+</script><script>function subtitleType () {
+  if (true) {
+    typedJSFn.init(["人类从历史中学到的唯一教训","就是人类无法从历史中学到任何教训"])
+  } else {
+    document.getElementById("subtitle").textContent = "人类从历史中学到的唯一教训"
+  }
+}
+typedJSFn.run(subtitleType)</script></div><script src="/custom/custom.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>
